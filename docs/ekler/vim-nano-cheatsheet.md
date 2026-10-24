@@ -119,7 +119,7 @@ Kalıcı yapmak için `~/.vimrc` dosyasına (başında `:` olmadan) yazın.
 ## Sık senaryolar
 | Senaryo | İpucu |
 |---|---|
-| YAML düzenlerken girinti bozuldu | vim'de yapıştırmadan önce `:set paste`; YAML'da **tab kullanılmaz** ([16.6](../16-formatlar/06-yaml.md)) |
+| YAML düzenlerken girinti bozuldu | vim'de yapıştırmadan önce `:set paste`; YAML'da **tab kullanılmaz** ([17.6](../17-formatlar/06-yaml.md)) |
 | `git commit` vim açtı | Mesajı yazın (`i`), sonra `Esc` ve `:wq` |
 | `crontab -e` hangi editörü açacağını sordu | `nano` seçin veya `EDITOR` ayarlayın |
 | Container içinde editör yok | `kubectl cp` / `oc rsync` ile dosyayı dışarı alın; kalıcı değişiklik image veya ConfigMap üzerinden yapılmalı ([5.9](../05-kubernetes/09-configmap-secret.md)) |

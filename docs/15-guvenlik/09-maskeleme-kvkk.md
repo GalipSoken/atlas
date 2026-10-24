@@ -132,5 +132,6 @@ sahte = [{"ad_soyad": fake.name(), "il": fake.city(), "telefon": fake.phone_numb
 
 ## İlgili sayfalar
 - [15.6 RBAC ve en az yetki](06-rbac-en-az-yetki.md)
-- [15.10 Veri yönetişimi](10-veri-yonetisimi.md)
+- [16.1 Veri yönetişimi](../16-veri-yonetisimi/01-veri-yonetisimi-nedir.md)
 - [14.3 Merkezi loglama](../14-gozlemlenebilirlik/03-merkezi-loglama.md)
+- [16.6 Veri sınıflandırma](../16-veri-yonetisimi/06-siniflandirma.md)

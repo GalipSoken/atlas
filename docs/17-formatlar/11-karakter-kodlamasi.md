@@ -1,4 +1,4 @@
-# 16.11 Karakter Kodlaması: UTF-8, Windows-1254 ve Türkçe Karakterler
+# 17.11 Karakter Kodlaması: UTF-8, Windows-1254 ve Türkçe Karakterler
 
 ## Nedir?
 Bilgisayar metni sayı olarak saklar. **Karakter kodlaması (character encoding)**, hangi karakterin hangi bayt dizisiyle temsil edileceğini belirleyen tablodur. Aynı baytlar farklı bir kodlamayla okunursa metin bozulur.
@@ -7,7 +7,7 @@ Bilgisayar metni sayı olarak saklar. **Karakter kodlaması (character encoding)
 - **UTF-8:** Unicode'u bayta çeviren en yaygın kodlama. İngilizce harfler 1 bayt, Türkçe özel harfler 2 bayt, `₺` 3 bayt, emojiler 4 bayt. Web'in, Linux'un, Python 3'ün ve modern veritabanlarının varsayılanı.
 - **Windows-1254 (cp1254):** Windows'un Türkçe tek baytlık kodlaması; eski Türkçe Windows uygulamaları, Excel CSV çıktıları, eski sistem dökümleri.
 - **ISO-8859-9 (Latin-5):** Türkçe için tek baytlık ISO standardı; eski Unix sistemlerinde ve bazı veritabanlarında.
-- **EBCDIC:** IBM ana bilgisayarlarının (mainframe) kodlaması; Türkçe sürümü **cp1026** ([16.14](14-finans-formatlari.md)).
+- **EBCDIC:** IBM ana bilgisayarlarının (mainframe) kodlaması; Türkçe sürümü **cp1026** ([17.14](14-finans-formatlari.md)).
 
 ## Hangi problemi çözer?
 Kodlamayı anlamak şu sorunların kaynağını bulmayı sağlar:
@@ -156,10 +156,10 @@ Python 3.15 ile metin dosyalarında varsayılan kodlamanın UTF-8 olması planla
 - **UTF-16:** Windows'un iç kodlaması, Java ve .NET string'leri; dosya olarak bazen Excel "Unicode Text" çıktısında görülür (`encoding="utf-16"`).
 - **ASCII:** Sadece İngilizce harfler, rakamlar ve temel işaretler (0–127); UTF-8'in ilk 128 karakteri ASCII ile aynıdır.
 - **Latin-1 (ISO-8859-1) / cp1252:** Batı Avrupa kodlamaları; Türkçe ğ, ı, ş, İ'yi içermez. "Hata vermeden her baytı okuyan" kodlama olduğu için yanlışlıkla kullanılıp mojibake üretir.
-- **Sıkıştırma ve şifreleme:** Kodlama metnin bayt temsilidir; sıkıştırma ([16.12](12-sikistirma-arsiv.md)) ve şifreleme ([15.8](../15-guvenlik/08-sifreleme.md)) bunun üzerinde ayrı katmanlardır.
+- **Sıkıştırma ve şifreleme:** Kodlama metnin bayt temsilidir; sıkıştırma ([17.12](12-sikistirma-arsiv.md)) ve şifreleme ([15.8](../15-guvenlik/08-sifreleme.md)) bunun üzerinde ayrı katmanlardır.
 
 ## İlgili sayfalar
-- [16.2 CSV](02-csv.md)
-- [16.1 Formatlara genel bakış](01-genel-bakis.md)
-- [16.14 Bankacılık ve finans formatları](14-finans-formatlari.md)
+- [17.2 CSV](02-csv.md)
+- [17.1 Formatlara genel bakış](01-genel-bakis.md)
+- [17.14 Bankacılık ve finans formatları](14-finans-formatlari.md)
 - [Regex cheat sheet](../ekler/regex-cheatsheet.md)

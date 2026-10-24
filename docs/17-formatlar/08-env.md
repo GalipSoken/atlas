@@ -1,4 +1,4 @@
-# 16.8 .env Dosyaları
+# 17.8 .env Dosyaları
 
 ## Nedir?
 **`.env` dosyası**, bir uygulamanın **ortam değişkenlerini** (environment variables, [1.5](../01-linux/05-environment.md)) satır satır `ANAHTAR=değer` biçiminde tutan düz metin dosyasıdır. Resmî bir standardı yoktur; "dotenv" kütüphaneleri ve araçlar (Docker Compose, Python `python-dotenv`, Node `dotenv`) tarafından yaygın kabul görmüş bir gelenektir.

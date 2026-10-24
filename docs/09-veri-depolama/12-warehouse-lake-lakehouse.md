@@ -94,5 +94,5 @@ SELECT * FROM lakehouse.gold.kredi_aylik VERSION AS OF 42;
 - [9.13 Medallion mimarisi](13-medallion.md)
 - [9.14 Delta Lake ve Iceberg](14-delta-iceberg.md)
 - [9.11 Schema-on-write ve read](11-schema-on-write-read.md)
-- [16.5 Parquet](../16-formatlar/05-parquet.md)
+- [17.5 Parquet](../17-formatlar/05-parquet.md)
 - [9.15 Nesne depolama: S3 ve MinIO](15-nesne-depolama.md)

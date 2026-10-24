@@ -113,4 +113,5 @@ while True:
 - [11.6 Batch ve streaming](06-batch-streaming.md)
 - [11.3 CDC](03-yukleme-turleri.md)
 - [7.6 Webhook ve olay odaklı iletişim](../07-api/06-diger-yaklasimlar.md)
-- [16.9 Avro](../16-formatlar/09-digerleri.md)
+- [17.9 Avro](../17-formatlar/09-digerleri.md)
+- [11.11 Kafka ve Redpanda](11-kafka-redpanda.md)

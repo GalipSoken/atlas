@@ -110,4 +110,4 @@ df = pd.json_normalize(belgeler)          # iç içe alanlar: iletisim.il gibi s
 ## İlgili sayfalar
 - [9.5 NoSQL türleri](05-nosql-turleri.md)
 - [9.11 Schema-on-write ve schema-on-read](11-schema-on-write-read.md)
-- [16.4 BSON](../16-formatlar/04-bson.md)
+- [17.4 BSON](../17-formatlar/04-bson.md)

@@ -1,4 +1,4 @@
-# 16.7 TOML
+# 17.7 TOML
 
 ## Nedir?
 **TOML (Tom's Obvious, Minimal Language)**, okunması ve yazılması kolay, **belirsizliği az** olacak şekilde tasarlanmış bir konfigürasyon formatıdır. Görünüşü INI dosyalarına benzer ama gerçek veri tipleri (tamsayı, ondalık, tarih-saat, dizi, tablo) ve iç içe yapı destekler.
@@ -148,5 +148,5 @@ Kural: Derin ve uzun hiyerarşiler (Kubernetes manifestleri) için YAML; düz–
 
 ## İlgili sayfalar
 - [2.5 pyproject.toml ve bağımlılıklar](../02-python-ortam/05-bagimlilik-dosyalari.md)
-- [16.6 YAML](06-yaml.md)
-- [16.8 .env](08-env.md)
+- [17.6 YAML](06-yaml.md)
+- [17.8 .env](08-env.md)

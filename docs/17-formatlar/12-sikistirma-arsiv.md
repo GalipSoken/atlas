@@ -1,4 +1,4 @@
-# 16.12 Sıkıştırma ve Arşiv Formatları: zip, gzip, tar, zstd, snappy
+# 17.12 Sıkıştırma ve Arşiv Formatları: zip, gzip, tar, zstd, snappy
 
 ## Nedir?
 İki ayrı işlev çoğu zaman birbirine karıştırılır:
@@ -6,7 +6,7 @@
 - **Arşivleme (archiving):** Birden çok dosyayı ve klasör yapısını tek dosyada toplamak. `tar`.
 - **İkisi birden:** `zip`, `7z`, `rar` hem arşivler hem sıkıştırır. `tar.gz` (`.tgz`) ise önce `tar` ile toplayıp sonra `gzip` ile sıkıştırmaktır.
 
-Sıkıştırma bir dosya formatının **üzerinde** ayrı bir katmandır: `kredi.csv.gz` hâlâ bir CSV'dir. Parquet ve ORC gibi formatlar ise sıkıştırmayı **içeride**, sütun veya blok bazında yapar ([16.5](05-parquet.md)).
+Sıkıştırma bir dosya formatının **üzerinde** ayrı bir katmandır: `kredi.csv.gz` hâlâ bir CSV'dir. Parquet ve ORC gibi formatlar ise sıkıştırmayı **içeride**, sütun veya blok bazında yapar ([17.5](05-parquet.md)).
 
 ## Hangi problemi çözer?
 - **Depolama maliyeti:** Metin tabanlı veriler (CSV, JSON, log) genellikle 5–10 kat küçülür.
@@ -115,12 +115,12 @@ df.write.option("compression", "zstd").parquet("s3a://veri-lake/silver/islem/")
 - Docker image katmanları (tar + gzip/zstd)
 
 ## Benzerleri ve farkları
-- **Sütun bazlı formatların iç sıkıştırması:** Parquet'te sözlük kodlama + snappy/zstd, dışarıdan gzip'lemekten çok daha verimlidir ve bölünebilirliği korur ([16.5](05-parquet.md)).
+- **Sütun bazlı formatların iç sıkıştırması:** Parquet'te sözlük kodlama + snappy/zstd, dışarıdan gzip'lemekten çok daha verimlidir ve bölünebilirliği korur ([17.5](05-parquet.md)).
 - **Veritabanı sıkıştırması:** Oracle Advanced/Hybrid Columnar Compression, PostgreSQL TOAST ve tablo erişim yöntemleri; sıkıştırmayı depolama motoru yapar.
 - **Deduplication:** Yedekleme sistemlerinde aynı blokları bir kez saklamak; sıkıştırmadan farklı ama tamamlayıcı bir teknik.
 
 ## İlgili sayfalar
-- [16.1 Formatlara genel bakış](01-genel-bakis.md)
-- [16.5 Parquet](05-parquet.md)
+- [17.1 Formatlara genel bakış](01-genel-bakis.md)
+- [17.5 Parquet](05-parquet.md)
 - [9.15 Nesne depolama](../09-veri-depolama/15-nesne-depolama.md)
 - [Linux / bash cheat sheet](../ekler/linux-bash-cheatsheet.md)

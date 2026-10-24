@@ -1,4 +1,4 @@
-# 16.6 YAML
+# 17.6 YAML
 
 ## Nedir?
 **YAML ("YAML Ain't Markup Language")**, insan tarafından kolay okunup yazılmak üzere tasarlanmış, **girintiye (indentation) dayalı** hiyerarşik veri formatıdır. Dosya uzantıları `.yaml` veya `.yml`.
@@ -135,14 +135,14 @@ kubectl apply --dry-run=client -f deployment.yaml # Kubernetes YAML doğrulama
 ## Benzerleri ve farkları
 | Format | Fark |
 |---|---|
-| **JSON** | Daha katı ve makine dostu; yorum yok; API'ler için ([16.3](03-json.md)) |
-| **TOML** | Daha az belirsizlik, düz/orta derinlikte konfigürasyon için; girintiye bağımlı değil ([16.7](07-toml.md)) |
+| **JSON** | Daha katı ve makine dostu; yorum yok; API'ler için ([17.3](03-json.md)) |
+| **TOML** | Daha az belirsizlik, düz/orta derinlikte konfigürasyon için; girintiye bağımlı değil ([17.7](07-toml.md)) |
 | **INI** | Çok basit bölüm + anahtar=değer; iç içe yapı yok |
-| **.env** | Sadece düz anahtar=değer; ortam değişkenleri ([16.8](08-env.md)) |
+| **.env** | Sadece düz anahtar=değer; ortam değişkenleri ([17.8](08-env.md)) |
 
 Kural: **İnsanların yazdığı, iç içe ve uzun konfigürasyonlar → YAML; programlar arası veri alışverişi → JSON; Python proje/araç ayarları → TOML.**
 
 ## İlgili sayfalar
 - [5.14 kubectl](../05-kubernetes/14-kubectl-komutlari.md)
 - [6.2 Pipeline aşamaları](../06-ci-cd/02-pipeline-asamalari.md)
-- [16.7 TOML](07-toml.md)
+- [17.7 TOML](07-toml.md)

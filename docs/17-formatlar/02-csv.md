@@ -1,4 +1,4 @@
-# 16.2 CSV
+# 17.2 CSV
 
 ## Nedir?
 **CSV (Comma-Separated Values — virgülle ayrılmış değerler)**, tablo verisini düz metin olarak saklayan en basit formattır. Her satır bir kayıt, her alan bir ayırıcıyla (genellikle virgül) ayrılır; ilk satır çoğunlukla sütun başlıklarıdır.
@@ -38,7 +38,7 @@ Resmî bir tanımı (RFC 4180) olsa da pratikte birçok "lehçesi" vardır: nokt
 | **Excel'in otomatik dönüştürmesi** | Uzun numaralar (TCKN, hesap no) bilimsel gösterime döner: `1,23457E+10`; bazı kodlar tarihe döner | Kimlik alanlarını metin olarak işaretle, mümkünse Excel'de elle açıp kaydetme |
 | **Boş değer** | Boş, `NULL`, `NA`, `-` karışık | Okurken `na_values` ile tanımla |
 | **Şema yok** | Sütun sırası/adı değişince süreç kırılır | Okuma sonrası şema kontrolü ([11.5](../11-veri-akisi/05-veri-kalitesi.md)) |
-| **Büyük boyut** | GB'larca, yavaş | Parquet'e dönüştür ([16.5](05-parquet.md)) |
+| **Büyük boyut** | GB'larca, yavaş | Parquet'e dönüştür ([17.5](05-parquet.md)) |
 
 ## Mini örnek
 **pandas ile güvenli okuma**
@@ -99,10 +99,10 @@ COPY (SELECT * FROM read_csv('kredi.csv')) TO 'kredi.parquet' (FORMAT parquet);
 - **TSV:** Sekmeyle ayrılmış; metin içinde virgül çok olduğunda daha az tırnak sorunu.
 - **Sabit genişlikli (fixed-width) dosyalar:** Ana bilgisayar (mainframe) ve eski bankacılık sistemlerinde yaygın; her alan belirli karakter aralığında (`pd.read_fwf`).
 - **Parquet:** Büyük ve tekrar okunan veride CSV yerine tercih edilmelidir; tipleri korur, sıkıştırır, hızlıdır.
-- **Excel:** Biçimlendirme ve çoklu sayfa sunar, ama makine okuması için daha kırılgandır ([16.9](09-digerleri.md)).
+- **Excel:** Biçimlendirme ve çoklu sayfa sunar, ama makine okuması için daha kırılgandır ([17.9](09-digerleri.md)).
 
 ## İlgili sayfalar
-- [16.1 Genel bakış](01-genel-bakis.md)
-- [16.5 Parquet](05-parquet.md)
+- [17.1 Genel bakış](01-genel-bakis.md)
+- [17.5 Parquet](05-parquet.md)
 - [10.2 pandas](../10-veri-isleme/02-pandas.md)
-- [16.11 Karakter kodlaması](11-karakter-kodlamasi.md)
+- [17.11 Karakter kodlaması](11-karakter-kodlamasi.md)

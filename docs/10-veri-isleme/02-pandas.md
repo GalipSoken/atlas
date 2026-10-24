@@ -103,4 +103,4 @@ df = pd.read_parquet("veri.parquet", dtype_backend="pyarrow")           # Arrow 
 - [10.3 Spark](03-spark.md)
 - [10.4 Karşılaştırma](04-karsilastirma.md)
 - [10.5 Polars ve DuckDB](05-polars-duckdb.md)
-- [16.2 CSV](../16-formatlar/02-csv.md)
+- [17.2 CSV](../17-formatlar/02-csv.md)

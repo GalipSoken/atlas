@@ -109,7 +109,7 @@ CREATE INDEX ix_islem_musteri ON islem (musteri_id) ONLINE;           -- Oracle 
 ## Benzerleri ve farkları
 - **Partitioning:** Index satırı bulur; partitioning okunacak veri miktarını parçalara göre azaltır. Büyük tablolarda ikisi birlikte kullanılır ([9.23](23-partitioning-derinlemesine.md)).
 - **Materialized view / özet tablo:** Index yetmediğinde sonucu önceden hesaplayıp saklamak.
-- **Kolon bazlı depolama:** Analitik veritabanları (ClickHouse, Snowflake, DuckDB, Parquet) klasik index yerine min/max istatistikleri ve sıralamayla veri atlar ([16.5](../16-formatlar/05-parquet.md)).
+- **Kolon bazlı depolama:** Analitik veritabanları (ClickHouse, Snowflake, DuckDB, Parquet) klasik index yerine min/max istatistikleri ve sıralamayla veri atlar ([17.5](../17-formatlar/05-parquet.md)).
 
 ## İlgili sayfalar
 - [9.4 Veritabanı performansı](04-performans.md)

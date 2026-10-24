@@ -1,4 +1,4 @@
-# 16.14 Bankacılık ve Finans Formatları: Sabit Uzunluklu Dosyalar, EBCDIC, ISO 20022, SWIFT MT, XBRL
+# 17.14 Bankacılık ve Finans Formatları: Sabit Uzunluklu Dosyalar, EBCDIC, ISO 20022, SWIFT MT, XBRL
 
 ## Nedir?
 Bankacılıkta genel amaçlı formatların (CSV, JSON, Parquet) yanında, sektöre özgü ve çoğu onlarca yıllık geçmişi olan formatlarla karşılaşılır:
@@ -40,7 +40,7 @@ TR00000000020000000001337550
 **Dikkat noktaları**
 - **Örtük ondalık (implied decimal):** Tutar alanında virgül yoktur; kaç hanenin ondalık olduğu belgede yazar. Yanlış varsayım 100 kat hata demektir.
 - **Başlık ve kapanış kayıtları:** Kapanış kaydındaki kayıt sayısı ve toplam tutar, dosyanın eksiksiz geldiğini doğrulamak için **mutabakat kontrolü** olarak kullanılmalıdır ([11.5](../11-veri-akisi/05-veri-kalitesi.md)).
-- **Konum karakter mi, bayt mı?** Tek baytlık kodlamada (cp1254, EBCDIC) aynıdır; dosya UTF-8'e çevrilmişse Türkçe karakterli satırlarda bayt konumları kayar ([16.11](11-karakter-kodlamasi.md)).
+- **Konum karakter mi, bayt mı?** Tek baytlık kodlamada (cp1254, EBCDIC) aynıdır; dosya UTF-8'e çevrilmişse Türkçe karakterli satırlarda bayt konumları kayar ([17.11](11-karakter-kodlamasi.md)).
 - **Boşluk doldurma:** Metin alanlarında sondaki boşluklar, sayısal alanlarda baştaki sıfırlar temizlenmelidir; ama müşteri/hesap numarası gibi alanlarda baştaki sıfırlar **anlamlıdır**, sayıya çevrilmemelidir.
 
 ### EBCDIC ve COBOL copybook
@@ -94,7 +94,7 @@ SWIFT, sınır ötesi ödeme talimatlarında MT ile ISO 20022'nin birlikte kulla
   </FIToFICstmrCdtTrf>
 </Document>
 ```
-Avantajı: Alıcı/gönderen adı, adresi, ödeme amacı, açıklama gibi bilgiler ayrı ve yapılandırılmış alanlarda gelir; uyum (AML/yaptırım taraması) ve otomatik mutabakat kolaylaşır. Mesajlar **XSD şemasıyla** doğrulanır ([16.9](09-digerleri.md)).
+Avantajı: Alıcı/gönderen adı, adresi, ödeme amacı, açıklama gibi bilgiler ayrı ve yapılandırılmış alanlarda gelir; uyum (AML/yaptırım taraması) ve otomatik mutabakat kolaylaşır. Mesajlar **XSD şemasıyla** doğrulanır ([17.9](09-digerleri.md)).
 
 ### SWIFT MT
 ```
@@ -198,12 +198,12 @@ Gerçek kullanımda bağlam (`context`) tanımları dönem ve konsolide/solo ayr
 - Finansal tablo analizi: halka açık şirketlerin raporlarından kalem kalem veri çekmek (XBRL)
 
 ## Benzerleri ve farkları
-- **CSV:** Ayraçlı; alan konumları değişebilir ama alan sırası ve ayraç sabittir ([16.2](02-csv.md)). Sabit uzunluklu dosyalarda ayraç yoktur, konum her şeydir.
-- **Genel XML:** ISO 20022 ve XBRL, XML'in üzerine kurulmuş, şeması ve anlamı sabitlenmiş sektör dilleridir ([16.9](09-digerleri.md)).
+- **CSV:** Ayraçlı; alan konumları değişebilir ama alan sırası ve ayraç sabittir ([17.2](02-csv.md)). Sabit uzunluklu dosyalarda ayraç yoktur, konum her şeydir.
+- **Genel XML:** ISO 20022 ve XBRL, XML'in üzerine kurulmuş, şeması ve anlamı sabitlenmiş sektör dilleridir ([17.9](09-digerleri.md)).
 - **JSON tabanlı açık bankacılık API'leri:** Yeni nesil entegrasyonlar (hesap bilgisi, ödeme başlatma) REST + JSON kullanır; ISO 20022 veri modelinden esinlenen alanlar içerebilir ([7.3](../07-api/03-rest-json.md)).
 
 ## İlgili sayfalar
-- [16.11 Karakter kodlaması](11-karakter-kodlamasi.md)
-- [16.9 Diğerleri: Avro, ORC, Arrow, XML, Excel](09-digerleri.md)
+- [17.11 Karakter kodlaması](11-karakter-kodlamasi.md)
+- [17.9 Diğerleri: Avro, ORC, Arrow, XML, Excel](09-digerleri.md)
 - [11.5 Veri kalitesi](../11-veri-akisi/05-veri-kalitesi.md)
 - [Regex cheat sheet](../ekler/regex-cheatsheet.md)

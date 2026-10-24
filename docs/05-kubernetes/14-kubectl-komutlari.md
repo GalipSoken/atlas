@@ -102,4 +102,4 @@ kubectl get events --sort-by=.lastTimestamp | tail -20
 ## İlgili sayfalar
 - [5.18 oc komutları](18-oc-komutlari.md)
 - [kubectl / oc cheat sheet](../ekler/kubectl-oc-cheatsheet.md)
-- [16.6 YAML](../16-formatlar/06-yaml.md)
+- [17.6 YAML](../17-formatlar/06-yaml.md)

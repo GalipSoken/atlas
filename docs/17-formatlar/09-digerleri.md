@@ -1,4 +1,4 @@
-# 16.9 Diğerleri: Avro, ORC, Arrow, XML, Excel
+# 17.9 Diğerleri: Avro, ORC, Arrow, XML, Excel
 
 ## Nedir?
 Veri projelerinde sık karşılaşılan diğer beş format:
@@ -154,10 +154,10 @@ SELECT * FROM read_xlsx('bddk_kredi.xlsx', sheet = 'Krediler', range = 'A4:C200'
 | Güçlü yanı | Tek kayıt yazma, akış, şema evrimi | Analitik okuma, geniş ekosistem | Hive, yüksek sıkıştırma | Kopyasız paylaşım, bellek içi hız |
 
 - **Excel'i veri kaynağı olarak kullanırken:** Format kırılgandır (başlık satırı kayabilir, sütun adları değişebilir, birleştirilmiş hücreler). Okuma sonrası mutlaka şema ve kalite kontrolü yapılmalı ([11.5](../11-veri-akisi/05-veri-kalitesi.md)); ham dosya bronze katmanda saklanmalıdır ([9.13](../09-veri-depolama/13-medallion.md)).
-- **XML ile JSON:** Yeni API'lerde JSON tercih edilir; XML, katı şema doğrulaması ve belge odaklı senaryolarda ve mevcut entegrasyonlarda devam eder ([16.3](03-json.md)).
+- **XML ile JSON:** Yeni API'lerde JSON tercih edilir; XML, katı şema doğrulaması ve belge odaklı senaryolarda ve mevcut entegrasyonlarda devam eder ([17.3](03-json.md)).
 
 ## İlgili sayfalar
-- [16.1 Genel bakış](01-genel-bakis.md)
-- [16.5 Parquet](05-parquet.md)
+- [17.1 Genel bakış](01-genel-bakis.md)
+- [17.5 Parquet](05-parquet.md)
 - [11.7 Kafka](../11-veri-akisi/07-kafka.md)
-- [16.14 Bankacılık ve finans formatları](14-finans-formatlari.md)
+- [17.14 Bankacılık ve finans formatları](14-finans-formatlari.md)

@@ -1,4 +1,4 @@
-# 16.13 Model ve Notebook Formatları: pickle, joblib, ONNX, PMML, .ipynb
+# 17.13 Model ve Notebook Formatları: pickle, joblib, ONNX, PMML, .ipynb
 
 ## Nedir?
 Veri bilimi projelerinde tablo verisi dışında iki tür dosya sürekli üretilir:
@@ -143,7 +143,7 @@ papermill sablon.ipynb cikti_2026_09.ipynb -p donem 2026-09
 | Uzantı | Not |
 |---|---|
 | `.npy` / `.npz` | NumPy dizileri (`np.save`, `np.savez_compressed`); `allow_pickle=False` ile güvenli yükleme |
-| `.feather` / `.arrow` | pandas/Arrow arasında çok hızlı ara dosya ([16.9](09-digerleri.md)) |
+| `.feather` / `.arrow` | pandas/Arrow arasında çok hızlı ara dosya ([17.9](09-digerleri.md)) |
 | `.h5` / `.hdf5` | Büyük, hiyerarşik bilimsel veri; pandas `HDFStore` |
 | `.rds` / `.RData` | R nesneleri; Python'dan `pyreadr` ile |
 | `.sas7bdat`, `.sav`, `.dta` | SAS, SPSS, Stata veri dosyaları: `pd.read_sas`, `pd.read_spss`, `pd.read_stata` |
@@ -162,5 +162,5 @@ papermill sablon.ipynb cikti_2026_09.ipynb -p donem 2026-09
 ## İlgili sayfalar
 - [13.2 MLflow](../13-mlops/02-mlflow.md)
 - [13.3 Model serving](../13-mlops/03-model-serving.md)
-- [16.3 JSON](03-json.md)
-- [16.10 Markdown](10-markdown.md)
+- [17.3 JSON](03-json.md)
+- [17.10 Markdown](10-markdown.md)

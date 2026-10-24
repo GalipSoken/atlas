@@ -1,4 +1,4 @@
-# 16.5 Parquet
+# 17.5 Parquet
 
 ## Nedir?
 **Apache Parquet**, analitik iş yükleri için tasarlanmış, **sütun bazlı (columnar), sıkıştırılmış, şemalı ve ikili** bir dosya formatıdır. Lakehouse'ların ([9.12](../09-veri-depolama/12-warehouse-lake-lakehouse.md)), Spark'ın ve modern veri araçlarının (pandas, Polars, DuckDB, Trino, Snowflake, BigQuery) standart veri dosyasıdır. Delta Lake ve Iceberg tabloları da altta Parquet dosyalarından oluşur ([9.14](../09-veri-depolama/14-delta-iceberg.md)).
@@ -111,10 +111,10 @@ ls -lh kredi.csv kredi.parquet
 ## Benzerleri ve farkları
 | Format | Fark |
 |---|---|
-| **CSV** | Metin, şemasız, evrensel; küçük veri ve insan okuması için ([16.2](02-csv.md)) |
-| **ORC** | Benzer sütun formatı; Hive/Hadoop dünyasında yaygın ([16.9](09-digerleri.md)) |
+| **CSV** | Metin, şemasız, evrensel; küçük veri ve insan okuması için ([17.2](02-csv.md)) |
+| **ORC** | Benzer sütun formatı; Hive/Hadoop dünyasında yaygın ([17.9](09-digerleri.md)) |
 | **Avro** | Satır bazlı ve şemalı; tek tek kayıt yazma ve akışlar için daha uygun |
-| **Arrow** | Bellek içi sütun formatı; Parquet diskte, Arrow bellekte ([16.9](09-digerleri.md)) |
+| **Arrow** | Bellek içi sütun formatı; Parquet diskte, Arrow bellekte ([17.9](09-digerleri.md)) |
 | **Delta / Iceberg** | Parquet dosyaları + işlem günlüğü/metadata: ACID, güncelleme, zaman yolculuğu ([9.14](../09-veri-depolama/14-delta-iceberg.md)) |
 
 **Dikkat:**
@@ -125,4 +125,4 @@ ls -lh kredi.csv kredi.parquet
 ## İlgili sayfalar
 - [9.14 Delta Lake ve Iceberg](../09-veri-depolama/14-delta-iceberg.md)
 - [10.5 Polars ve DuckDB](../10-veri-isleme/05-polars-duckdb.md)
-- [16.9 Avro, ORC, Arrow](09-digerleri.md)
+- [17.9 Avro, ORC, Arrow](09-digerleri.md)

@@ -114,4 +114,4 @@ curl -s https://api.sirket.local/v1/basvurular | jq '.[] | {id: .basvuru_id, tut
 ## İlgili sayfalar
 - [7.2 HTTP](02-http.md)
 - [7.4 FastAPI](04-fastapi.md)
-- [16.3 JSON ve JSON Lines](../16-formatlar/03-json.md)
+- [17.3 JSON ve JSON Lines](../17-formatlar/03-json.md)

@@ -183,4 +183,4 @@ yedekler/                              # versioning + object lock açık
 ## İlgili sayfalar
 - [9.12 Warehouse, lake, lakehouse](12-warehouse-lake-lakehouse.md)
 - [9.14 Delta Lake ve Iceberg](14-delta-iceberg.md)
-- [16.5 Parquet](../16-formatlar/05-parquet.md)
+- [17.5 Parquet](../17-formatlar/05-parquet.md)
