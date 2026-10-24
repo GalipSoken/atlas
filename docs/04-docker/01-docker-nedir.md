@@ -91,3 +91,4 @@ docker stop pg && docker rm pg            # durdur ve sil
 - [4.2 Dockerfile](02-dockerfile.md)
 - [4.4 Docker komutları](04-docker-komutlari.md)
 - [5.1 Kubernetes nedir](../05-kubernetes/01-kubernetes-nedir.md)
+- [1.11 Sanal makine](../01-linux/11-sanal-makine.md)

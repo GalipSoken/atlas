@@ -134,3 +134,6 @@ WHERE unvan LIKE '%BANK%'
 ## İlgili sayfalar
 - [9.3 PostgreSQL ve Oracle](03-postgres-oracle.md)
 - [10.1 SQL ile veri işleme](../10-veri-isleme/01-sql.md)
+- [9.18 Index derinlemesine](18-index-derinlemesine.md)
+- [9.19 Execution plan](19-execution-plan.md)
+- [9.23 Partitioning derinlemesine](23-partitioning-derinlemesine.md)

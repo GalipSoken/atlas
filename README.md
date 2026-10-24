@@ -39,6 +39,8 @@ Her konu sayfası aynı yapıyı izler:
 - [1.7 Pipe, yönlendirme ve bash script](docs/01-linux/07-bash-script.md)
 - [1.8 cron ile zamanlama](docs/01-linux/08-cron.md)
 - [1.9 Ağ temelleri: DNS, port, firewall, proxy, load balancer](docs/01-linux/09-ag-temelleri.md)
+- [1.10 localhost, 127.0.0.1, 0.0.0.0 ve port dinleme](docs/01-linux/10-localhost.md)
+- [1.11 Sanal makine (VM) ve hypervisor](docs/01-linux/11-sanal-makine.md)
 
 #### 2. Python Ortam Yönetimi
 - [2.1 Neden sanal ortam gerekir](docs/02-python-ortam/01-neden-sanal-ortam.md)
@@ -104,7 +106,7 @@ Her konu sayfası aynı yapıyı izler:
 - [7.5 API güvenliği: API key, token, rate limit](docs/07-api/05-api-guvenligi.md)
 - [7.6 REST dışı yaklaşımlar: GraphQL, gRPC, webhook](docs/07-api/06-diger-yaklasimlar.md)
 
-#### 8. Web Sunucuları ve Reverse Proxy — nginx
+#### 8. Web Sunucuları, Reverse Proxy ve Kenar Ağı — nginx, Cloudflare
 - [8.1 Web sunucusu nedir: statik içerik ve uygulama sunucusu farkı](docs/08-nginx/01-web-sunucusu-nedir.md)
 - [8.2 nginx nedir, nerede durur](docs/08-nginx/02-nginx-nedir.md)
 - [8.3 Konfigürasyon yapısı: server, location, upstream](docs/08-nginx/03-konfigurasyon.md)
@@ -114,6 +116,13 @@ Her konu sayfası aynı yapıyı izler:
 - [8.7 Cache, gzip ve rate limit](docs/08-nginx/07-cache-rate-limit.md)
 - [8.8 Loglar ve sık hatalar: 502, 504, 413](docs/08-nginx/08-log-hatalar.md)
 - [8.9 Kubernetes'te nginx: Ingress Controller](docs/08-nginx/09-ingress-controller.md)
+
+**Kenar ağı: Cloudflare**
+- [8.10 CDN ve kenar ağı: Cloudflare nedir](docs/08-nginx/10-cdn-edge-cloudflare.md) — proxied/DNS only, önbellek, 52x hataları
+- [8.11 Cloudflare DNS: kayıtlar, SPF, DKIM, DMARC](docs/08-nginx/11-cloudflare-dns.md)
+- [8.12 Cloudflare'de SSL/TLS: Flexible, Full, Full (strict)](docs/08-nginx/12-cloudflare-ssl-tls.md)
+- [8.13 WAF, DDoS ve bot koruması](docs/08-nginx/13-waf-ddos-bot.md) — custom rules, rate limiting, Turnstile
+- [8.14 Cloudflare Tunnel ve Zero Trust erişim](docs/08-nginx/14-tunnel-zero-trust.md)
 
 ### Kısım III — Veri
 
@@ -133,6 +142,19 @@ Her konu sayfası aynı yapıyı izler:
 - [9.13 Medallion mimarisi: bronze, silver, gold](docs/09-veri-depolama/13-medallion.md)
 - [9.14 Delta Lake ve Apache Iceberg](docs/09-veri-depolama/14-delta-iceberg.md)
 - [9.15 Nesne depolama: S3 ve MinIO](docs/09-veri-depolama/15-nesne-depolama.md)
+
+**SQL derinlemesine**
+- [9.16 Transaction ve isolation seviyeleri](docs/09-veri-depolama/16-transaction-isolation.md) — MVCC, dirty/phantom read, savepoint
+- [9.17 Lock ve deadlock](docs/09-veri-depolama/17-lock-deadlock.md) — `FOR UPDATE`, `SKIP LOCKED`, `lock_timeout`
+- [9.18 Index derinlemesine: doğru index, kullanılmayan index](docs/09-veri-depolama/18-index-derinlemesine.md)
+- [9.19 Execution plan (sorgu planı) okumak](docs/09-veri-depolama/19-execution-plan.md) — `EXPLAIN ANALYZE`, `DBMS_XPLAN`
+- [9.20 Join türleri ve join stratejileri](docs/09-veri-depolama/20-join-stratejileri.md) — nested loop, hash, merge
+- [9.21 Hint'ler: optimizer'a yön vermek](docs/09-veri-depolama/21-hint.md)
+- [9.22 CTE ve window functions](docs/09-veri-depolama/22-cte-window.md) — `ROW_NUMBER`, `LAG`, recursive CTE
+- [9.23 Partitioning derinlemesine](docs/09-veri-depolama/23-partitioning-derinlemesine.md) — pruning, local/global index, exchange
+- [9.24 Connection pooling](docs/09-veri-depolama/24-connection-pooling.md) — PgBouncer, SQLAlchemy pool
+- [9.25 Stored procedure, function, trigger ve view](docs/09-veri-depolama/25-procedure-function-trigger.md)
+- [9.26 Query timeout ve kaynak sınırları](docs/09-veri-depolama/26-query-timeout.md)
 
 #### 10. Veri İşleme Araçları
 - [10.1 SQL: veri veritabanında işlenir](docs/10-veri-isleme/01-sql.md)

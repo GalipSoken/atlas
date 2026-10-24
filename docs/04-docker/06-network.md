@@ -66,3 +66,4 @@ docker network connect etl-agi baska  # çalışan container'ı ağa ekle
 ## İlgili sayfalar
 - [4.8 Docker Compose](08-docker-compose.md)
 - [5.7 Service türleri](../05-kubernetes/07-service.md)
+- [1.10 localhost ve port dinleme](../01-linux/10-localhost.md)

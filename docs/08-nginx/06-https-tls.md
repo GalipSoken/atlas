@@ -107,3 +107,4 @@ curl --cacert sirket-ca.pem https://api.sirket.local/health  # kurum CA'sıyla d
 ## İlgili sayfalar
 - [8.4 Reverse proxy](04-reverse-proxy.md)
 - [7.5 API güvenliği](../07-api/05-api-guvenligi.md)
+- [8.12 Cloudflare'de SSL/TLS](12-cloudflare-ssl-tls.md)
