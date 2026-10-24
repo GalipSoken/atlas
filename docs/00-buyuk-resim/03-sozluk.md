@@ -12,6 +12,12 @@ Kitapta sık geçen terimlerin kısa açıklamaları. Ayrıntılı anlatım içi
 | **Sanal ortam (virtual env)** | Bir projeye özel, izole Python paket alanı. (2) |
 | **Port** | Bir makinedeki servislerin ayrıldığı numaralı kapılar (ör. 80, 443, 5432). |
 | **Proxy** | İstekleri başka bir yere ileten aracı sunucu. (8) |
+| **localhost / loopback** | "Bu makinenin kendisi"; 127.0.0.1. Trafik makineden dışarı çıkmaz. (1.10) |
+| **Sanal makine (VM)** | Fiziksel sunucu üzerinde yazılımla oluşturulmuş, kendi işletim sistemi olan bilgisayar. (1.11) |
+| **Hypervisor** | Sanal makineleri çalıştıran ve donanımı paylaştıran katman (ESXi, KVM, Hyper-V). (1.11) |
+| **CDN / kenar (edge)** | Kullanıcıya yakın sunuculardan içerik sunan dağıtık ağ. (8.10) |
+| **WAF** | HTTP isteklerinin içeriğine bakarak saldırıları engelleyen web uygulama güvenlik duvarı. (8.13) |
+| **Zero Trust** | Ağ konumuna değil, her istekte kimlik ve bağlama göre erişim verme yaklaşımı. (8.14) |
 
 ## Kod ve versiyon
 | Terim | Açıklama |
@@ -55,6 +61,11 @@ Kitapta sık geçen terimlerin kısa açıklamaları. Ayrıntılı anlatım içi
 | **ETL / ELT** | Veriyi çekme, dönüştürme ve yükleme sırası. (11.1) |
 | **Schema-on-write / read** | Şemanın yazarken mi okurken mi uygulandığı. (9.11) |
 | **Lakehouse** | Data lake esnekliği ile warehouse düzenini birleştiren mimari. (9.12) |
+| **Transaction / isolation** | Birlikte başarılı olması gereken işlemler / eşzamanlı işlemlerin birbirini ne kadar gördüğü. (9.16) |
+| **Deadlock** | İki işlemin birbirinin kilidini beklemesi; veritabanı birini iptal eder. (9.17) |
+| **Execution plan** | Veritabanının sorguyu nasıl çalıştıracağını gösteren adım adım tarif. (9.19) |
+| **Window function** | Satırları tek satıra indirmeden pencere üzerinde hesap (sıra, önceki değer, kümülatif toplam). (9.22) |
+| **Connection pool** | Veritabanı bağlantılarını açık tutup tekrar kullanan havuz. (9.24) |
 
 ## İlgili sayfalar
 - [0.1 Koddan canlıya](01-koddan-canliya.md)

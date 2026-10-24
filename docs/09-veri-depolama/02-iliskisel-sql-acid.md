@@ -122,3 +122,4 @@ COMMIT;      -- hata olursa: ROLLBACK;
 - [9.3 PostgreSQL ve Oracle](03-postgres-oracle.md)
 - [9.4 Performans](04-performans.md)
 - [10.1 SQL ile veri işleme](../10-veri-isleme/01-sql.md)
+- [9.16 Transaction ve isolation](16-transaction-isolation.md)

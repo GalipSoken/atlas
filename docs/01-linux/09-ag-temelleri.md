@@ -158,3 +158,4 @@ spec:
 - [5.7 Kubernetes Service ve DNS](../05-kubernetes/07-service.md)
 - [1.6 SSH](06-ssh.md)
 - [Ağ cheat sheet'i için Linux / bash](../ekler/linux-bash-cheatsheet.md)
+- [1.10 localhost ve port dinleme](10-localhost.md)

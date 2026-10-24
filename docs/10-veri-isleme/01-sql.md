@@ -107,3 +107,4 @@ df = pd.read_sql(sorgu, engine, params={"d": "2026-09-01"})     # parametreli: g
 ## İlgili sayfalar
 - [9.2 İlişkisel veritabanları ve SQL](../09-veri-depolama/02-iliskisel-sql-acid.md)
 - [10.4 SQL, Pandas, Spark karşılaştırması](04-karsilastirma.md)
+- [9.22 CTE ve window functions](../09-veri-depolama/22-cte-window.md)
