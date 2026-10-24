@@ -228,6 +228,11 @@ Her konu sayfası aynı yapıyı izler:
 - [16.7 TOML](docs/16-formatlar/07-toml.md)
 - [16.8 .env dosyaları](docs/16-formatlar/08-env.md)
 - [16.9 Diğerleri: Avro, ORC, Arrow, XML, Excel](docs/16-formatlar/09-digerleri.md)
+- [16.10 Markdown (.md)](docs/16-formatlar/10-markdown.md) — README, GFM, Mermaid, Pandoc, MkDocs
+- [16.11 Karakter kodlaması: UTF-8, Windows-1254, Türkçe İ/ı](docs/16-formatlar/11-karakter-kodlamasi.md)
+- [16.12 Sıkıştırma ve arşiv: zip, gzip, tar, zstd, snappy](docs/16-formatlar/12-sikistirma-arsiv.md)
+- [16.13 Model ve notebook formatları: pickle, joblib, ONNX, PMML, .ipynb](docs/16-formatlar/13-model-notebook-formatlari.md)
+- [16.14 Bankacılık ve finans formatları: sabit uzunluklu dosya, EBCDIC, ISO 20022, SWIFT MT, XBRL](docs/16-formatlar/14-finans-formatlari.md)
 
 #### Ekler — Cheat Sheet'ler
 - [Linux / bash](docs/ekler/linux-bash-cheatsheet.md)
