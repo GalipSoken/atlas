@@ -1,4 +1,4 @@
-# 16.10 Markdown (.md)
+# 17.10 Markdown (.md)
 
 ## Nedir?
 **Markdown**, düz metne birkaç basit işaret (`#`, `*`, `-`, `` ` ``) ekleyerek başlık, liste, tablo, bağlantı ve kod bloğu yazmayı sağlayan hafif bir **biçimlendirme dilidir** (markup language). Dosya uzantısı `.md`'dir. 2004'te John Gruber tarafından "okunması kolay düz metin, gerektiğinde HTML'e dönüşsün" fikriyle tasarlandı.
@@ -60,7 +60,7 @@ Satır içi formül: $PSI = \sum (a_i - e_i) \ln(a_i / e_i)$
 ````
 Mermaid bu kitaptaki tüm diyagramların kaynağıdır; resim dosyası yerine metin olarak tutulduğu için güncellemesi ve Git'te izlenmesi kolaydır.
 
-**Front matter:** Dosyanın en başına `---` arasında YAML ile metadata yazılabilir. Statik site üreticileri ve not araçları (MkDocs, Hugo, Jekyll, Docusaurus, Obsidian) bunu başlık, etiket, tarih gibi bilgiler için okur ([16.6](06-yaml.md)).
+**Front matter:** Dosyanın en başına `---` arasında YAML ile metadata yazılabilir. Statik site üreticileri ve not araçları (MkDocs, Hugo, Jekyll, Docusaurus, Obsidian) bunu başlık, etiket, tarih gibi bilgiler için okur ([17.6](06-yaml.md)).
 ```markdown
 ---
 title: BDDK Kredi ETL Çalışma Kılavuzu
@@ -164,7 +164,7 @@ Mermaid diyagramları için `pymdownx.superfences` içinde ayrıca `custom_fence
 ## Nerede kullanılır?
 - README, CONTRIBUTING, CHANGELOG dosyaları; bu kitap gibi Git tabanlı bilgi kaynakları
 - Runbook'lar, mimari karar kayıtları (ADR), postmortem notları
-- Jupyter notebook'larda açıklama hücreleri ([16.13](13-model-notebook-formatlari.md))
+- Jupyter notebook'larda açıklama hücreleri ([17.13](13-model-notebook-formatlari.md))
 - Pull Request ve issue açıklamaları
 - Streamlit uygulamalarında metin, Grafana panellerinde metin kutuları
 - LLM istemleri ve çıktıları, RAG için belge tabanları
@@ -180,7 +180,7 @@ Mermaid diyagramları için `pymdownx.superfences` içinde ayrıca `custom_fence
 | **Notion / Obsidian** | Markdown tabanlı veya Markdown dışa aktarabilen not araçları |
 
 ## İlgili sayfalar
-- [16.1 Formatlara genel bakış](01-genel-bakis.md)
-- [16.6 YAML](06-yaml.md)
+- [17.1 Formatlara genel bakış](01-genel-bakis.md)
+- [17.6 YAML](06-yaml.md)
 - [3.6 GitHub ve Pull Request](../03-git/06-github-pull-request.md)
 - [12.5 Streamlit](../12-bi/05-streamlit.md)

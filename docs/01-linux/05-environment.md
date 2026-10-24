@@ -67,4 +67,4 @@ Bu yaklaşım "12-Factor App" prensiplerinden **Config** maddesi olarak bilinir:
 ## İlgili sayfalar
 - [2.1 Sanal ortam](../02-python-ortam/01-neden-sanal-ortam.md)
 - [3.4 .gitignore](../03-git/04-gitignore.md)
-- [16.8 .env dosyaları](../16-formatlar/08-env.md)
+- [17.8 .env dosyaları](../17-formatlar/08-env.md)

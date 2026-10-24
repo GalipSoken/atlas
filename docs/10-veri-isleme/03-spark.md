@@ -116,3 +116,4 @@ pyspark                    # etkileşimli kabuk; tek makinede "local[*]" modda �
 ## İlgili sayfalar
 - [10.4 Karşılaştırma](04-karsilastirma.md)
 - [9.14 Delta Lake ve Iceberg](../09-veri-depolama/14-delta-iceberg.md)
+- [10.6 Spark ve Dask](06-spark-dask.md)

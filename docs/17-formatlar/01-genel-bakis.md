@@ -1,4 +1,4 @@
-# 16.1 Formatlara Genel Bakış: Metin / İkili, Satır / Sütun, Şemalı / Şemasız
+# 17.1 Formatlara Genel Bakış: Metin / İkili, Satır / Sütun, Şemalı / Şemasız
 
 ## Nedir?
 **Dosya formatı**, verinin bir dosyada (veya ağ üzerinden gönderilirken) hangi kurallarla yazıldığıdır. Bu kitapta karşılaşılan formatlar iki ana amaca hizmet eder:
@@ -46,19 +46,19 @@ Sütun bazlı (Parquet, ORC):              [1,2,...] [Ali,Ayşe,...] [KOBİ,Bire
 **Karşılaştırma tablosu**
 | Format | Tür | Yapı | Şema | Tipik kullanım | Bölüm |
 |---|---|---|---|---|---|
-| CSV | Metin | Satır, düz | Yok | Basit veri alışverişi, Excel dışa aktarım | [16.2](02-csv.md) |
-| JSON | Metin | Hiyerarşik | Yok (JSON Schema ile isteğe bağlı) | API'ler, konfigürasyon, log | [16.3](03-json.md) |
-| JSON Lines | Metin | Satır, her satır bir JSON | Yok | Log, akış, büyük JSON veri | [16.3](03-json.md) |
-| BSON | İkili | Hiyerarşik | Yok | MongoDB'nin iç formatı | [16.4](04-bson.md) |
-| Parquet | İkili | Sütun | Var | Analitik, lakehouse | [16.5](05-parquet.md) |
-| YAML | Metin | Hiyerarşik | Yok | Kubernetes, CI/CD, Ansible, uygulama ayarları | [16.6](06-yaml.md) |
-| TOML | Metin | Hiyerarşik (tablolar) | Yok | `pyproject.toml`, araç ayarları | [16.7](07-toml.md) |
-| .env | Metin | Düz anahtar=değer | Yok | Ortam değişkenleri, gizli olmayan + gizli ayarlar | [16.8](08-env.md) |
-| Avro | İkili | Satır | Var | Kafka mesajları, veri aktarımı | [16.9](09-digerleri.md) |
-| ORC | İkili | Sütun | Var | Hive / Hadoop dünyası | [16.9](09-digerleri.md) |
-| Arrow | İkili (bellek) | Sütun | Var | Bellekte araçlar arası kopyasız veri paylaşımı | [16.9](09-digerleri.md) |
-| XML | Metin | Hiyerarşik | XSD ile | SOAP, eski entegrasyonlar, düzenleyici bildirimler | [16.9](09-digerleri.md) |
-| Excel (xlsx) | İkili (zip+XML) | Sayfa/tablo | Yok | İş birimleriyle paylaşım, dış veri kaynakları | [16.9](09-digerleri.md) |
+| CSV | Metin | Satır, düz | Yok | Basit veri alışverişi, Excel dışa aktarım | [17.2](02-csv.md) |
+| JSON | Metin | Hiyerarşik | Yok (JSON Schema ile isteğe bağlı) | API'ler, konfigürasyon, log | [17.3](03-json.md) |
+| JSON Lines | Metin | Satır, her satır bir JSON | Yok | Log, akış, büyük JSON veri | [17.3](03-json.md) |
+| BSON | İkili | Hiyerarşik | Yok | MongoDB'nin iç formatı | [17.4](04-bson.md) |
+| Parquet | İkili | Sütun | Var | Analitik, lakehouse | [17.5](05-parquet.md) |
+| YAML | Metin | Hiyerarşik | Yok | Kubernetes, CI/CD, Ansible, uygulama ayarları | [17.6](06-yaml.md) |
+| TOML | Metin | Hiyerarşik (tablolar) | Yok | `pyproject.toml`, araç ayarları | [17.7](07-toml.md) |
+| .env | Metin | Düz anahtar=değer | Yok | Ortam değişkenleri, gizli olmayan + gizli ayarlar | [17.8](08-env.md) |
+| Avro | İkili | Satır | Var | Kafka mesajları, veri aktarımı | [17.9](09-digerleri.md) |
+| ORC | İkili | Sütun | Var | Hive / Hadoop dünyası | [17.9](09-digerleri.md) |
+| Arrow | İkili (bellek) | Sütun | Var | Bellekte araçlar arası kopyasız veri paylaşımı | [17.9](09-digerleri.md) |
+| XML | Metin | Hiyerarşik | XSD ile | SOAP, eski entegrasyonlar, düzenleyici bildirimler | [17.9](09-digerleri.md) |
+| Excel (xlsx) | İkili (zip+XML) | Sayfa/tablo | Yok | İş birimleriyle paylaşım, dış veri kaynakları | [17.9](09-digerleri.md) |
 
 ## Mini örnek
 Aynı 3 satırlık veri, farklı formatlarda:
@@ -113,12 +113,12 @@ duckdb -c "DESCRIBE SELECT * FROM 'kredi.parquet'"    # Parquet şeması
 | Ortama özgü ayar ve şifre (geliştirmede) | `.env` |
 
 ## Benzerleri ve farkları
-- **Sıkıştırma ayrı bir katmandır:** `kredi.csv.gz`, Parquet içinde Snappy/Zstd. Sıkıştırma boyutu küçültür; formatın yapısını değiştirmez ([16.12](12-sikistirma-arsiv.md)).
-- **Kodlama (encoding):** Metin formatlarında karakter kodlaması önemlidir. Standart **UTF-8**; eski Windows/Excel dosyalarında `cp1254` (Türkçe Windows) veya `ISO-8859-9` ile karşılaşılabilir ([16.11](11-karakter-kodlamasi.md)).
+- **Sıkıştırma ayrı bir katmandır:** `kredi.csv.gz`, Parquet içinde Snappy/Zstd. Sıkıştırma boyutu küçültür; formatın yapısını değiştirmez ([17.12](12-sikistirma-arsiv.md)).
+- **Kodlama (encoding):** Metin formatlarında karakter kodlaması önemlidir. Standart **UTF-8**; eski Windows/Excel dosyalarında `cp1254` (Türkçe Windows) veya `ISO-8859-9` ile karşılaşılabilir ([17.11](11-karakter-kodlamasi.md)).
 
 ## İlgili sayfalar
-- [16.2 CSV](02-csv.md)
-- [16.5 Parquet](05-parquet.md)
-- [16.6 YAML](06-yaml.md)
-- [16.10 Markdown](10-markdown.md)
-- [16.14 Bankacılık ve finans formatları](14-finans-formatlari.md)
+- [17.2 CSV](02-csv.md)
+- [17.5 Parquet](05-parquet.md)
+- [17.6 YAML](06-yaml.md)
+- [17.10 Markdown](10-markdown.md)
+- [17.14 Bankacılık ve finans formatları](14-finans-formatlari.md)

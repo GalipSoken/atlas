@@ -105,3 +105,4 @@ ORDER BY 1;
 - [5.13 Kubernetes RBAC](../05-kubernetes/13-rbac.md)
 - [15.7 Secret yönetimi](07-secret-yonetimi.md)
 - [15.9 Maskeleme ve KVKK](09-maskeleme-kvkk.md)
+- [16.7 Veriye erişim politikaları](../16-veri-yonetisimi/07-erisim-politikalari.md)

@@ -1,4 +1,4 @@
-# 16.3 JSON ve JSON Lines
+# 17.3 JSON ve JSON Lines
 
 ## Nedir?
 - **JSON (JavaScript Object Notation):** İnsan tarafından okunabilir, hiyerarşik (iç içe) veri formatı. Web API'lerinin, birçok konfigürasyon dosyasının ve NoSQL veritabanlarının ortak dili. Standart: RFC 8259.
@@ -119,13 +119,13 @@ WHERE veri @> '{"segment": "KOBİ"}';
 ## Benzerleri ve farkları
 | Format | Fark |
 |---|---|
-| **YAML** | JSON'un üst kümesi sayılır; yorum ve daha okunaklı yazım, konfigürasyon için ([16.6](06-yaml.md)) |
-| **BSON** | JSON'un ikili hâli, ek veri tipleriyle (tarih, ondalık); MongoDB ([16.4](04-bson.md)) |
-| **XML** | Daha ağır, öznitelik ve şema (XSD) desteği; eski sistemler ([16.9](09-digerleri.md)) |
-| **Parquet** | Büyük tablo verisi için çok daha verimli ([16.5](05-parquet.md)) |
+| **YAML** | JSON'un üst kümesi sayılır; yorum ve daha okunaklı yazım, konfigürasyon için ([17.6](06-yaml.md)) |
+| **BSON** | JSON'un ikili hâli, ek veri tipleriyle (tarih, ondalık); MongoDB ([17.4](04-bson.md)) |
+| **XML** | Daha ağır, öznitelik ve şema (XSD) desteği; eski sistemler ([17.9](09-digerleri.md)) |
+| **Parquet** | Büyük tablo verisi için çok daha verimli ([17.5](05-parquet.md)) |
 | **Protobuf / Avro** | Şemalı, ikili, küçük ve hızlı; servisler arası ve Kafka ([7.6](../07-api/06-diger-yaklasimlar.md)) |
 
 ## İlgili sayfalar
 - [7.3 REST ve JSON](../07-api/03-rest-json.md)
-- [16.4 BSON](04-bson.md)
-- [16.6 YAML](06-yaml.md)
+- [17.4 BSON](04-bson.md)
+- [17.6 YAML](06-yaml.md)

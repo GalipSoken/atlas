@@ -118,4 +118,4 @@ mlflow server --backend-store-uri postgresql://... --artifacts-destination s3://
 ## İlgili sayfalar
 - [13.1 ML yaşam döngüsü](01-ml-yasam-dongusu.md)
 - [13.3 Model serving](03-model-serving.md)
-- [16.13 Model ve notebook formatları](../16-formatlar/13-model-notebook-formatlari.md)
+- [17.13 Model ve notebook formatları](../17-formatlar/13-model-notebook-formatlari.md)

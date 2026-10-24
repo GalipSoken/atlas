@@ -67,7 +67,21 @@ Kitapta sık geçen terimlerin kısa açıklamaları. Ayrıntılı anlatım içi
 | **Window function** | Satırları tek satıra indirmeden pencere üzerinde hesap (sıra, önceki değer, kümülatif toplam). (9.22) |
 | **Connection pool** | Veritabanı bağlantılarını açık tutup tekrar kullanan havuz. (9.24) |
 
+## Yönetişim ve kalite
+| Terim | Açıklama |
+|---|---|
+| **Veri yönetişimi (data governance)** | Verinin doğru, güvenli ve kurallara uygun yönetilmesi için roller, politikalar ve süreçler. (16.1) |
+| **Metadata / veri kataloğu** | Veri hakkındaki veri / kurumdaki veri varlıklarının aranabilir envanteri. (16.2) |
+| **Lineage** | Verinin nereden gelip nereye gittiğini gösteren soy ağacı; etki analizinin temeli. (16.3) |
+| **Veri sahibi / steward** | Veriden hesap veren iş birimi / günlük tanım ve kalite yönetimini yapan kişi. (16.1, 16.5) |
+| **Data contract** | Veriyi üreten ve kullanan ekipler arasındaki şema, anlam, kalite ve SLA sözleşmesi. (16.5) |
+| **Sınıflandırma** | Verinin hassasiyet seviyesine (genel, kuruma özel, gizli, çok gizli) göre etiketlenmesi. (16.6) |
+| **RLS / maskeleme** | Kullanıcıya göre satırların filtrelenmesi / hassas sütunların gizlenmesi. (16.7) |
+| **Kalite boyutları** | Tamlık, geçerlilik, doğruluk, tutarlılık, benzersizlik, tazelik. (16.8) |
+| **Konnektör** | Kaynaktan hedefe veri taşıyan hazır bileşen (Airbyte, Meltano, dlt). (11.9) |
+| **At-least-once / exactly-once** | Akış sistemlerinde mesajın en az bir kez / tam bir kez işlenme garantisi. (11.11) |
+
 ## İlgili sayfalar
 - [0.1 Koddan canlıya](01-koddan-canliya.md)
 - [0.2 Veriden rapora](02-veriden-rapora.md)
-- [16.1 Dosya ve veri formatları](../16-formatlar/01-genel-bakis.md)
+- [17.1 Dosya ve veri formatları](../17-formatlar/01-genel-bakis.md)

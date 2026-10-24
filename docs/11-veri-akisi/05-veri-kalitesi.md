@@ -134,3 +134,5 @@ sema.validate(df)          # kurala uymazsa ayrıntılı hata
 - [11.4 dbt](04-dbt.md)
 - [11.2 Akışta şema](02-akista-schema.md)
 - [6.3 Otomatik testler](../06-ci-cd/03-otomatik-test.md)
+- [16.8 Veri kalitesi yönetimi](../16-veri-yonetisimi/08-kalite-yonetimi.md)
+- [16.9 Great Expectations ve Soda](../16-veri-yonetisimi/09-kalite-araclari.md)

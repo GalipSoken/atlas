@@ -124,3 +124,4 @@ airflow dags backfill bddk_aylik -s 2026-01-01 -e 2026-03-31   # geçmişi doldu
 - [1.8 cron](../01-linux/08-cron.md)
 - [5.6 Kubernetes CronJob](../05-kubernetes/06-job-cronjob.md)
 - [11.4 dbt](04-dbt.md)
+- [11.10 Airflow, Dagster, Prefect karşılaştırması](10-orkestrator-karsilastirma.md)

@@ -162,6 +162,7 @@ Her konu sayfası aynı yapıyı izler:
 - [10.3 Spark: dağıtık işlem ve lazy evaluation](docs/10-veri-isleme/03-spark.md)
 - [10.4 SQL, Pandas ve Spark karşılaştırması](docs/10-veri-isleme/04-karsilastirma.md) — aynı sorgunun üç araçta yazılışı
 - [10.5 Ara seçenekler: Polars ve DuckDB](docs/10-veri-isleme/05-polars-duckdb.md)
+- [10.6 Dağıtık işleme: Apache Spark ve Dask](docs/10-veri-isleme/06-spark-dask.md)
 
 #### 11. Veri Akışı
 - [11.1 ETL ve ELT: diyagramla akış](docs/11-veri-akisi/01-etl-elt.md) — kaynak (transaction DB) → warehouse / lakehouse → rapor / HQ
@@ -172,6 +173,9 @@ Her konu sayfası aynı yapıyı izler:
 - [11.6 Batch ve streaming farkı](docs/11-veri-akisi/06-batch-streaming.md)
 - [11.7 Mesaj kuyrukları ve Kafka](docs/11-veri-akisi/07-kafka.md)
 - [11.8 Zamanlama ve orkestrasyon: cron, Airflow, n8n](docs/11-veri-akisi/08-orkestrasyon.md)
+- [11.9 ETL/ELT konnektörleri: Airbyte, Meltano, dlt](docs/11-veri-akisi/09-etl-konnektorleri.md)
+- [11.10 Workflow orkestrasyonu: Airflow, Dagster, Prefect](docs/11-veri-akisi/10-orkestrator-karsilastirma.md) — aynı iş üç araçta
+- [11.11 Streaming platformları: Kafka ve Redpanda, teslim garantileri, akış işleme](docs/11-veri-akisi/11-kafka-redpanda.md)
 
 #### 12. BI ve Görselleştirme
 - [12.1 BI nedir](docs/12-bi/01-bi-nedir.md)
@@ -204,7 +208,7 @@ Her konu sayfası aynı yapıyı izler:
 
 ### Kısım V — Kurumsal Katman
 
-#### 15. Kimlik, Güvenlik ve Veri Yönetişimi
+#### 15. Kimlik ve Güvenlik
 - [15.1 Kimlik doğrulama ve yetkilendirme farkı (authN / authZ)](docs/15-guvenlik/01-authn-authz.md)
 - [15.2 LDAP nedir: dizin yapısı, DN, OU, bind](docs/15-guvenlik/02-ldap.md)
 - [15.3 Active Directory ve LDAP ilişkisi](docs/15-guvenlik/03-active-directory.md)
@@ -214,25 +218,35 @@ Her konu sayfası aynı yapıyı izler:
 - [15.7 Secret yönetimi: Vault, şifrelerin koddan ayrılması](docs/15-guvenlik/07-secret-yonetimi.md)
 - [15.8 Şifreleme: TLS, at-rest ve in-transit](docs/15-guvenlik/08-sifreleme.md)
 - [15.9 Veri maskeleme, anonimleştirme ve KVKK](docs/15-guvenlik/09-maskeleme-kvkk.md)
-- [15.10 Veri yönetişimi: data catalog, metadata, lineage](docs/15-guvenlik/10-veri-yonetisimi.md)
+
+#### 16. Veri Yönetişimi ve Kalite
+- [16.1 Veri yönetişimi nedir: çerçeve, roller, politikalar, BCBS 239](docs/16-veri-yonetisimi/01-veri-yonetisimi-nedir.md)
+- [16.2 Veri kataloğu ve metadata yönetimi, iş sözlüğü](docs/16-veri-yonetisimi/02-katalog-metadata.md)
+- [16.3 Data lineage ve etki analizi](docs/16-veri-yonetisimi/03-lineage.md)
+- [16.4 OpenLineage ve DataHub: lineage ve metadata'yı otomatik toplamak](docs/16-veri-yonetisimi/04-openlineage-datahub.md)
+- [16.5 Veri sahipliği, data contract ve data mesh](docs/16-veri-yonetisimi/05-sahiplik-data-contract.md)
+- [16.6 Veri sınıflandırma ve etiketleme](docs/16-veri-yonetisimi/06-siniflandirma.md)
+- [16.7 Veriye erişim politikaları: RBAC, ABAC, satır ve sütun güvenliği](docs/16-veri-yonetisimi/07-erisim-politikalari.md)
+- [16.8 Veri kalitesi yönetimi: boyutlar, kurallar, eşikler, sorun süreci](docs/16-veri-yonetisimi/08-kalite-yonetimi.md)
+- [16.9 Veri kalitesi araçları: Great Expectations ve Soda](docs/16-veri-yonetisimi/09-kalite-araclari.md)
 
 ### Kısım VI — Başvuru
 
-#### 16. Dosya ve Veri Formatları
-- [16.1 Formatlara genel bakış: metin / ikili, satır / sütun, şemalı / şemasız](docs/16-formatlar/01-genel-bakis.md)
-- [16.2 CSV](docs/16-formatlar/02-csv.md)
-- [16.3 JSON ve JSON Lines](docs/16-formatlar/03-json.md)
-- [16.4 BSON](docs/16-formatlar/04-bson.md)
-- [16.5 Parquet](docs/16-formatlar/05-parquet.md)
-- [16.6 YAML](docs/16-formatlar/06-yaml.md)
-- [16.7 TOML](docs/16-formatlar/07-toml.md)
-- [16.8 .env dosyaları](docs/16-formatlar/08-env.md)
-- [16.9 Diğerleri: Avro, ORC, Arrow, XML, Excel](docs/16-formatlar/09-digerleri.md)
-- [16.10 Markdown (.md)](docs/16-formatlar/10-markdown.md) — README, GFM, Mermaid, Pandoc, MkDocs
-- [16.11 Karakter kodlaması: UTF-8, Windows-1254, Türkçe İ/ı](docs/16-formatlar/11-karakter-kodlamasi.md)
-- [16.12 Sıkıştırma ve arşiv: zip, gzip, tar, zstd, snappy](docs/16-formatlar/12-sikistirma-arsiv.md)
-- [16.13 Model ve notebook formatları: pickle, joblib, ONNX, PMML, .ipynb](docs/16-formatlar/13-model-notebook-formatlari.md)
-- [16.14 Bankacılık ve finans formatları: sabit uzunluklu dosya, EBCDIC, ISO 20022, SWIFT MT, XBRL](docs/16-formatlar/14-finans-formatlari.md)
+#### 17. Dosya ve Veri Formatları
+- [17.1 Formatlara genel bakış: metin / ikili, satır / sütun, şemalı / şemasız](docs/17-formatlar/01-genel-bakis.md)
+- [17.2 CSV](docs/17-formatlar/02-csv.md)
+- [17.3 JSON ve JSON Lines](docs/17-formatlar/03-json.md)
+- [17.4 BSON](docs/17-formatlar/04-bson.md)
+- [17.5 Parquet](docs/17-formatlar/05-parquet.md)
+- [17.6 YAML](docs/17-formatlar/06-yaml.md)
+- [17.7 TOML](docs/17-formatlar/07-toml.md)
+- [17.8 .env dosyaları](docs/17-formatlar/08-env.md)
+- [17.9 Diğerleri: Avro, ORC, Arrow, XML, Excel](docs/17-formatlar/09-digerleri.md)
+- [17.10 Markdown (.md)](docs/17-formatlar/10-markdown.md) — README, GFM, Mermaid, Pandoc, MkDocs
+- [17.11 Karakter kodlaması: UTF-8, Windows-1254, Türkçe İ/ı](docs/17-formatlar/11-karakter-kodlamasi.md)
+- [17.12 Sıkıştırma ve arşiv: zip, gzip, tar, zstd, snappy](docs/17-formatlar/12-sikistirma-arsiv.md)
+- [17.13 Model ve notebook formatları: pickle, joblib, ONNX, PMML, .ipynb](docs/17-formatlar/13-model-notebook-formatlari.md)
+- [17.14 Bankacılık ve finans formatları: sabit uzunluklu dosya, EBCDIC, ISO 20022, SWIFT MT, XBRL](docs/17-formatlar/14-finans-formatlari.md)
 
 #### Ekler — Cheat Sheet'ler
 - [Linux / bash](docs/ekler/linux-bash-cheatsheet.md)
@@ -271,7 +285,8 @@ atlas/
 │   ├── 13-mlops/
 │   ├── 14-gozlemlenebilirlik/
 │   ├── 15-guvenlik/
-│   ├── 16-formatlar/
+│   ├── 16-veri-yonetisimi/
+│   ├── 17-formatlar/
 │   └── ekler/
 └── assets/                 # diyagramlar ve görseller
 ```

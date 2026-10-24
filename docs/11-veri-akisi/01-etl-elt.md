@@ -121,3 +121,4 @@ ON CONFLICT (donem, kalem) DO UPDATE SET tutar = EXCLUDED.tutar;
 - [11.2 Akışta schema-on-write ve read](02-akista-schema.md)
 - [11.3 Yükleme türleri](03-yukleme-turleri.md)
 - [9.12 Warehouse, lake, lakehouse](../09-veri-depolama/12-warehouse-lake-lakehouse.md)
+- [11.9 ETL/ELT konnektörleri](09-etl-konnektorleri.md)

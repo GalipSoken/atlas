@@ -1,4 +1,4 @@
-# 16.4 BSON
+# 17.4 BSON
 
 ## Nedir?
 **BSON (Binary JSON)**, JSON benzeri belgelerin **ikili (binary)** olarak kodlanmış hâlidir. MongoDB tarafından geliştirilmiştir ve MongoDB belgeleri hem diskte hem ağ üzerinde BSON olarak saklanır ve taşınır ([9.6](../09-veri-depolama/06-mongodb.md)).
@@ -85,7 +85,7 @@ df["tutar"] = df["tutar"].map(lambda d: d.to_decimal() if d is not None else Non
 ## Benzerleri ve farkları
 | Format | Fark |
 |---|---|
-| **JSON** | Metin, evrensel, daha az tip ([16.3](03-json.md)) |
+| **JSON** | Metin, evrensel, daha az tip ([17.3](03-json.md)) |
 | **MessagePack** | Daha kompakt ikili JSON; tip zenginliği BSON'dan az |
 | **CBOR** | IETF standardı ikili JSON benzeri format (IoT, güvenlik protokolleri) |
 | **PostgreSQL `jsonb`** | Benzer fikir: JSON'un veritabanı içinde ayrıştırılmış ikili saklanması; ama tip sistemi JSON ile aynı |
@@ -93,4 +93,4 @@ df["tutar"] = df["tutar"].map(lambda d: d.to_decimal() if d is not None else Non
 
 ## İlgili sayfalar
 - [9.6 MongoDB](../09-veri-depolama/06-mongodb.md)
-- [16.3 JSON](03-json.md)
+- [17.3 JSON](03-json.md)

@@ -144,4 +144,4 @@ gitleaks detect --source . -v
 ## İlgili sayfalar
 - [5.9 ConfigMap ve Secret](../05-kubernetes/09-configmap-secret.md)
 - [15.8 Şifreleme](08-sifreleme.md)
-- [16.8 .env dosyaları](../16-formatlar/08-env.md)
+- [17.8 .env dosyaları](../17-formatlar/08-env.md)

@@ -83,4 +83,4 @@ Kilit dosyası (`uv.lock`) bu dosyadan üretilir ([2.4](04-uv-poetry.md)).
 ## İlgili sayfalar
 - [2.4 uv ve poetry](04-uv-poetry.md)
 - [4.2 Dockerfile](../04-docker/02-dockerfile.md)
-- [16.7 TOML](../16-formatlar/07-toml.md)
+- [17.7 TOML](../17-formatlar/07-toml.md)
