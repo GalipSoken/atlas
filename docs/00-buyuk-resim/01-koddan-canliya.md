@@ -31,6 +31,20 @@ flowchart LR
 | 8. Dışarı açmak | İstek uygulamaya yönlendirilir | nginx, Ingress, Route | [8](../08-nginx/02-nginx-nedir.md) |
 | 9. İzlemek | Log ve metrikler toplanır | Prometheus, Grafana | 14 |
 
+**Kitapta bu akışın adımları**
+| Adım | Ne olur? | Bölüm |
+|---|---|---|
+| Geliştirme ortamı | Linux, terminal, ağ, localhost, sanal makine | [1](../01-linux/01-linux-nedir.md) |
+| Bağımlılıklar | Sanal ortam, paket yönetimi | [2](../02-python-ortam/01-neden-sanal-ortam.md) |
+| Kodun saklanması | Git, branch, Pull Request | [3](../03-git/01-git-nedir.md) |
+| Paketleme | Docker image, registry | [4](../04-docker/01-docker-nedir.md) |
+| Çalıştırma | Kubernetes / OpenShift | [5](../05-kubernetes/01-kubernetes-nedir.md) |
+| Otomasyon | CI/CD, GitOps | [6](../06-ci-cd/01-ci-cd-nedir.md) |
+| Dış dünyaya açılma | API, nginx, Cloudflare | [7](../07-api/01-api-nedir.md), [8](../08-nginx/01-web-sunucusu-nedir.md) |
+| Model olarak canlıya alma | MLflow, serving, izleme, model riski | [13](../13-mlops/01-ml-yasam-dongusu.md) |
+| İzleme | Log, metrik, alarm | [14](../14-gozlemlenebilirlik/01-log-metrik-trace.md) |
+| Güvenlik | Kimlik, yetki, secret, şifreleme | [15](../15-guvenlik/01-authn-authz.md) |
+
 ## Mini örnek
 Bir Streamlit dashboard'u için akış şöyle görünür:
 

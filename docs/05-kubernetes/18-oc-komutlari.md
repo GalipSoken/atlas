@@ -17,7 +17,7 @@ OpenShift'e giriş yapmak, Project değiştirmek, uygulama oluşturmak, build al
 ### Giriş ve proje
 | Komut | Açıklama |
 |---|---|
-| `oc login https://api.ocp.sirket.local:6443 -u galip` | Kullanıcı adıyla giriş |
+| `oc login https://api.ocp.sirket.local:6443 -u mehmet` | Kullanıcı adıyla giriş |
 | `oc login --token=sha256~... --server=https://...` | Token ile giriş (konsoldan kopyalanır) |
 | `oc whoami` | Aktif kullanıcı |
 | `oc whoami --show-console` | Web konsolu adresi |
@@ -65,7 +65,7 @@ OpenShift'e giriş yapmak, Project değiştirmek, uygulama oluşturmak, build al
 ### Yetki ve yönetim
 | Komut | Açıklama |
 |---|---|
-| `oc adm policy add-role-to-user edit galip -n veri-dev` | Kullanıcıya rol |
+| `oc adm policy add-role-to-user edit mehmet -n veri-dev` | Kullanıcıya rol |
 | `oc adm policy add-role-to-group view veri-ekibi -n veri-prod` | Gruba rol |
 | `oc get rolebindings` | Yetkiler |
 | `oc adm groups sync --sync-config=ldap-sync.yaml --confirm` | LDAP gruplarını senkronize et (yönetici) |

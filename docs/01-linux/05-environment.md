@@ -16,7 +16,7 @@
 - PATH, `:` ile ayrılmış klasör listesidir. Shell soldan sağa arar ve ilk bulduğunu çalıştırır.
 
 ```
-PATH=/home/galip/.local/bin:/usr/local/bin:/usr/bin:/bin
+PATH=/home/mehmet/.local/bin:/usr/local/bin:/usr/bin:/bin
       ↑ önce burada aranır                  ↑ en son burada
 ```
 

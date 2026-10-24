@@ -5,7 +5,7 @@ Ayrıntılar: [15.2 LDAP](../15-guvenlik/02-ldap.md), [15.3 Active Directory](..
 ## Kavramlar
 | Terim | Örnek |
 |---|---|
-| DN (tam adres) | `CN=Galip Soken,OU=GenelMudurluk,OU=Kullanicilar,DC=sirket,DC=local` |
+| DN (tam adres) | `CN=Mehmet Türk,OU=GenelMudurluk,OU=Kullanicilar,DC=sirket,DC=local` |
 | Base DN | `DC=sirket,DC=local` |
 | Bind DN (servis hesabı) | `CN=svc-ldap-okuma,OU=ServisHesaplari,DC=sirket,DC=local` veya `svc-ldap-okuma@sirket.local` (AD) |
 | Kullanıcı adı özniteliği | OpenLDAP: `uid` · AD: `sAMAccountName`, `userPrincipalName` |
@@ -24,7 +24,7 @@ ldapsearch -H ldaps://dc01.sirket.local:636 \
   -D "svc-ldap-okuma@sirket.local" -W \
   -b "OU=Kullanicilar,DC=sirket,DC=local" \
   -s sub \
-  "(sAMAccountName=gsoken)" \
+  "(sAMAccountName=mturk)" \
   cn mail department memberOf
 ```
 | Parça | Anlamı |
@@ -40,7 +40,7 @@ Yararlı seçenekler: `-LLL` (sade LDIF çıktı), `-x` (basit bind; SASL yerine
 ## Sık kullanılan aramalar
 ```bash
 # Kullanıcı bilgisi
-... -b "DC=sirket,DC=local" "(sAMAccountName=gsoken)" displayName mail title department memberOf
+... -b "DC=sirket,DC=local" "(sAMAccountName=mturk)" displayName mail title department memberOf
 
 # Bir grubun doğrudan üyeleri
 ... -b "OU=Gruplar,DC=sirket,DC=local" "(cn=veri-ekibi)" member
@@ -76,7 +76,7 @@ Yararlı seçenekler: `-LLL` (sade LDIF çıktı), `-x` (basit bind; SASL yerine
 ## Kimlik doğrulama testleri
 ```bash
 # Kullanıcının parolası doğru mu? (kendi DN'i veya UPN'i ile bind)
-ldapwhoami -H ldaps://dc01.sirket.local -D "gsoken@sirket.local" -W
+ldapwhoami -H ldaps://dc01.sirket.local -D "mturk@sirket.local" -W
 
 # Sertifika / TLS sorunu var mı?
 openssl s_client -connect dc01.sirket.local:636 -showcerts </dev/null

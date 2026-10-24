@@ -23,7 +23,7 @@ flowchart TB
     ROOT --> OU3["ou=ServisHesaplari"]
     OU1 --> OU11["ou=GenelMudurluk"]
     OU1 --> OU12["ou=Subeler"]
-    OU11 --> U1["cn=Galip Soken<br/>uid=gsoken"]
+    OU11 --> U1["cn=Mehmet Türk<br/>uid=mturk"]
     OU11 --> U2["cn=Ayse Yilmaz<br/>uid=ayilmaz"]
     OU2 --> G1["cn=veri-ekibi"]
     OU2 --> G2["cn=kredi-okuma"]
@@ -33,14 +33,14 @@ flowchart TB
 **Temel kavramlar**
 | Kavram | Açıklama | Örnek |
 |---|---|---|
-| **Entry (kayıt)** | Ağaçtaki her düğüm; bir kişi, grup, birim | Galip'in kaydı |
-| **DN (Distinguished Name)** | Kaydın **tam adresi**, yaprağından köküne | `cn=Galip Soken,ou=GenelMudurluk,ou=Kullanicilar,dc=sirket,dc=local` |
-| **RDN** | DN'in en soldaki parçası | `cn=Galip Soken` |
+| **Entry (kayıt)** | Ağaçtaki her düğüm; bir kişi, grup, birim | Mehmet'in kaydı |
+| **DN (Distinguished Name)** | Kaydın **tam adresi**, yaprağından köküne | `cn=Mehmet Türk,ou=GenelMudurluk,ou=Kullanicilar,dc=sirket,dc=local` |
+| **RDN** | DN'in en soldaki parçası | `cn=Mehmet Türk` |
 | **Base DN** | Aramanın başladığı kök | `dc=sirket,dc=local` |
 | **dc (Domain Component)** | Alan adı parçaları | `sirket.local` → `dc=sirket,dc=local` |
 | **ou (Organizational Unit)** | Klasör benzeri birim | `ou=Kullanicilar` |
 | **cn (Common Name)** | Ortak ad | `cn=veri-ekibi` |
-| **uid / sAMAccountName** | Kullanıcı adı (OpenLDAP / Active Directory) | `gsoken` |
+| **uid / sAMAccountName** | Kullanıcı adı (OpenLDAP / Active Directory) | `mturk` |
 | **objectClass** | Kaydın türü ve hangi özniteliklere sahip olacağı | `person`, `inetOrgPerson`, `groupOfNames`, `user` |
 | **Attribute (öznitelik)** | Kayıttaki alanlar | `mail`, `title`, `department`, `memberOf` |
 | **Schema** | Hangi objectClass'ların ve özniteliklerin geçerli olduğu | |
@@ -60,10 +60,10 @@ sequenceDiagram
     participant K as Kullanıcı
     participant A as Uygulama
     participant L as LDAP sunucusu
-    K->>A: kullanıcı adı: gsoken, parola: ****
+    K->>A: kullanıcı adı: mturk, parola: ****
     A->>L: Bind (servis hesabı: cn=svc-ldap-okuma)
-    A->>L: Search base=ou=Kullanicilar filtre=(uid=gsoken)
-    L-->>A: DN: cn=Galip Soken,ou=GenelMudurluk,...  memberOf: veri-ekibi
+    A->>L: Search base=ou=Kullanicilar filtre=(uid=mturk)
+    L-->>A: DN: cn=Mehmet Türk,ou=GenelMudurluk,...  memberOf: veri-ekibi
     A->>L: Bind (kullanıcının DN'i + girdiği parola)
     L-->>A: Başarılı (parola doğru)
     A->>A: Gruplara göre yetki ver (AuthZ)
@@ -73,9 +73,9 @@ sequenceDiagram
 **LDAP filtre söz dizimi** (önek gösterim: işleç başta)
 | Filtre | Anlamı |
 |---|---|
-| `(uid=gsoken)` | uid'i gsoken olan |
+| `(uid=mturk)` | uid'i mturk olan |
 | `(&(objectClass=person)(department=Veri))` | VE: kişi olan ve departmanı Veri |
-| `(\|(uid=gsoken)(uid=ayilmaz))` | VEYA |
+| `(\|(uid=mturk)(uid=ayilmaz))` | VEYA |
 | `(!(accountStatus=disabled))` | DEĞİL |
 | `(cn=Gal*)` | Gal ile başlayan |
 | `(memberOf=cn=veri-ekibi,ou=Gruplar,dc=sirket,dc=local)` | Bu grubun üyesi |
@@ -96,26 +96,27 @@ Komut satırında arama (`ldapsearch`, OpenLDAP istemci araçları):
 ldapsearch -H ldaps://ldap.sirket.local:636 \
   -D "cn=svc-ldap-okuma,ou=ServisHesaplari,dc=sirket,dc=local" -W \
   -b "ou=Kullanicilar,dc=sirket,dc=local" \
-  "(uid=gsoken)" cn mail department memberOf
+  "(uid=mturk)" cn mail department memberOf
 
 # Bir grubun üyeleri
 ldapsearch -H ldaps://ldap.sirket.local -D "..." -W \
   -b "ou=Gruplar,dc=sirket,dc=local" "(cn=veri-ekibi)" member
 
 # Parolayı test etmek (kullanıcının kendi DN'iyle bind)
-ldapwhoami -H ldaps://ldap.sirket.local -D "cn=Galip Soken,ou=GenelMudurluk,ou=Kullanicilar,dc=sirket,dc=local" -W
+ldapwhoami -H ldaps://ldap.sirket.local -D "cn=Mehmet Türk,ou=GenelMudurluk,ou=Kullanicilar,dc=sirket,dc=local" -W
 ```
 
 LDIF formatında bir kayıt (dizine veri eklemek/dışa aktarmak için standart metin formatı):
 ```ldif
-dn: cn=Galip Soken,ou=GenelMudurluk,ou=Kullanicilar,dc=sirket,dc=local
+dn: cn=Mehmet Türk,ou=GenelMudurluk,ou=Kullanicilar,dc=sirket,dc=local
 objectClass: inetOrgPerson
-cn: Galip Soken
-sn: Soken
-uid: gsoken
-mail: galip@sirket.local
+cn: Mehmet Türk
+sn: Türk
+uid: mturk
+mail: mehmet@sirket.local
 departmentNumber: Veri Analitigi
 ```
+LDIF standardında ASCII dışı karakter (ü, ş, ı...) içeren değerler `::` ile **base64** kodlanır: `cn:: TWVobWV0IFTDvHJr`. `ldapsearch` çıktısında Türkçe karakterli adları bu biçimde görürsünüz; çözmek için `echo TWVobWV0IFTDvHJr | base64 -d`.
 
 Python (`ldap3`):
 ```python
@@ -125,7 +126,7 @@ server = Server("ldaps://ldap.sirket.local", use_ssl=True, get_info=ALL)
 conn = Connection(server, user="cn=svc-ldap-okuma,ou=ServisHesaplari,dc=sirket,dc=local",
                   password=SERVIS_PAROLASI, auto_bind=True)
 
-conn.search("ou=Kullanicilar,dc=sirket,dc=local", "(uid=gsoken)",
+conn.search("ou=Kullanicilar,dc=sirket,dc=local", "(uid=mturk)",
             search_scope=SUBTREE, attributes=["cn", "mail", "memberOf"])
 kullanici = conn.entries[0]
 print(kullanici.entry_dn, kullanici.memberOf.values)

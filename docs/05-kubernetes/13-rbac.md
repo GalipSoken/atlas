@@ -23,7 +23,7 @@ Dört nesne vardır:
 ```mermaid
 flowchart LR
     subgraph Kim[Kim? subject]
-        U[User<br/>galip]
+        U[User<br/>mehmet]
         G[Group<br/>veri-ekibi]
         SA[ServiceAccount<br/>ci-deployer]
     end
@@ -91,7 +91,7 @@ kubectl get rolebindings -n veri-prod
 
 ## Benzerleri ve farkları
 - **Kimlik doğrulama (authentication) ile yetkilendirme (authorization):** "Sen kimsin?" (LDAP, OIDC, sertifika) ile "Ne yapabilirsin?" (RBAC) ayrı sorulardır (Bölüm 15).
-- **OpenShift:** Aynı RBAC; ek olarak Project bazında hazır roller ve LDAP grup senkronizasyonu kolaylıkları vardır. `oc adm policy add-role-to-user edit galip -n veri-dev`.
+- **OpenShift:** Aynı RBAC; ek olarak Project bazında hazır roller ve LDAP grup senkronizasyonu kolaylıkları vardır. `oc adm policy add-role-to-user edit mehmet -n veri-dev`.
 - **SecurityContextConstraints (SCC):** OpenShift'te pod'un **nasıl** çalışabileceğini (root olabilir mi, hangi kullanıcı ID'si) kısıtlar; RBAC'tan farklı bir katmandır ([5.17](17-openshift-kavramlari.md)).
 
 ## İlgili sayfalar

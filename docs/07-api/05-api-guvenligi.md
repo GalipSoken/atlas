@@ -61,7 +61,7 @@ def api_key_kontrol(key: str = Security(api_key_header)):
 def token_kontrol(cred: HTTPAuthorizationCredentials = Security(bearer)) -> dict:
     # Gerçekte: PyJWT ile imza, süre (exp) ve audience doğrulanır
     # payload = jwt.decode(cred.credentials, public_key, algorithms=["RS256"], audience="kredi-api")
-    payload = {"sub": "galip", "roller": ["kredi_okuma"]}
+    payload = {"sub": "mehmet", "roller": ["kredi_okuma"]}
     return payload
 
 @app.get("/v1/kredi/ozet", dependencies=[Depends(api_key_kontrol)])

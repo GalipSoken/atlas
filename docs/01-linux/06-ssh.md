@@ -21,7 +21,7 @@ Sunucular veri merkezindedir; başına oturulmaz. SSH ile:
 sequenceDiagram
     participant L as Laptop (özel anahtar)
     participant S as Sunucu (açık anahtar)
-    L->>S: Bağlanmak istiyorum (kullanıcı: galip)
+    L->>S: Bağlanmak istiyorum (kullanıcı: mehmet)
     S->>L: Bu soruyu imzala
     L->>S: İmzalı cevap (özel anahtarla)
     S->>L: Açık anahtarla doğrulandı, hoş geldin
@@ -31,22 +31,22 @@ sequenceDiagram
 
 **Anahtar oluşturmak ve sunucuya eklemek**
 ```bash
-ssh-keygen -t ed25519 -C "galip@laptop"     # anahtar çifti oluştur
-ssh-copy-id galip@10.0.0.5                  # açık anahtarı sunucuya ekle
+ssh-keygen -t ed25519 -C "mehmet@laptop"     # anahtar çifti oluştur
+ssh-copy-id mehmet@10.0.0.5                  # açık anahtarı sunucuya ekle
 ```
 
 **Bağlanmak**
 ```bash
-ssh galip@10.0.0.5
-ssh -p 2222 galip@etl-sunucu.local          # farklı port
-ssh galip@10.0.0.5 "df -h"                  # tek komut çalıştırıp çık
+ssh mehmet@10.0.0.5
+ssh -p 2222 mehmet@etl-sunucu.local          # farklı port
+ssh mehmet@10.0.0.5 "df -h"                  # tek komut çalıştırıp çık
 ```
 
 **Kısayol: `~/.ssh/config`**
 ```
 Host etl
     HostName 10.0.0.5
-    User galip
+    User mehmet
     IdentityFile ~/.ssh/id_ed25519
 ```
 Artık sadece `ssh etl` yazmak yeterli.

@@ -18,7 +18,7 @@ Container'lar doğası gereği **geçicidir** (ephemeral): container silindiğin
 flowchart LR
     subgraph HOST[Host makine]
         V[(Named volume<br/>/var/lib/docker/volumes/pgdata)]
-        B[Proje klasörü<br/>/home/galip/proje]
+        B[Proje klasörü<br/>/home/mehmet/proje]
     end
     subgraph C1[Container: postgres]
         P["/var/lib/postgresql/data"]

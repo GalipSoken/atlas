@@ -92,3 +92,4 @@ du -sh *       # bu dizindeki öğelerin boyutu
 - [1.3 İzinler](03-izinler.md)
 - [1.7 Pipe ve bash script](07-bash-script.md)
 - [Linux cheat sheet](../ekler/linux-bash-cheatsheet.md)
+- [vim / nano cheat sheet](../ekler/vim-nano-cheatsheet.md)

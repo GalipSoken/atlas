@@ -15,7 +15,7 @@
 
 ```mermaid
 flowchart LR
-    U1[Galip] --> G1[AD grubu:<br/>veri-ekibi]
+    U1[Mehmet] --> G1[AD grubu:<br/>veri-ekibi]
     U2[Ayşe] --> G1
     U3[Mehmet] --> G2[AD grubu:<br/>bi-okuma]
     G1 --> R1[Rol: veri-gelistirici]
@@ -50,7 +50,7 @@ flowchart LR
 | Kötü | İyi |
 |---|---|
 | Herkese `db_owner` / `cluster-admin` | Görev bazlı roller: okuma, yazma, yönetim |
-| Kişiye özel roller (`galip_rolu`) | İşe göre roller (`kredi-analist`) |
+| Kişiye özel roller (`mehmet_rolu`) | İşe göre roller (`kredi-analist`) |
 | Prod şifresi ekipte paylaşılan bir dosyada | Kişisel kimlikle giriş + kayıt, servis şifreleri Vault'ta |
 | Geliştiricinin prod'a doğrudan yazma yetkisi | Değişiklik sadece CI/CD pipeline'ının servis hesabıyla |
 

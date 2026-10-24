@@ -127,3 +127,4 @@ with engine.begin() as conn:                # transaction bloğu
 - [9.17 Lock ve deadlock](17-lock-deadlock.md)
 - [9.26 Query timeout](26-query-timeout.md)
 - [11.3 Yükleme türleri](../11-veri-akisi/03-yukleme-turleri.md)
+- [9.25 Stored procedure, function, trigger](25-procedure-function-trigger.md)

@@ -80,6 +80,11 @@ Kitapta sık geçen terimlerin kısa açıklamaları. Ayrıntılı anlatım içi
 | **Kalite boyutları** | Tamlık, geçerlilik, doğruluk, tutarlılık, benzersizlik, tazelik. (16.8) |
 | **Konnektör** | Kaynaktan hedefe veri taşıyan hazır bileşen (Airbyte, Meltano, dlt). (11.9) |
 | **At-least-once / exactly-once** | Akış sistemlerinde mesajın en az bir kez / tam bir kez işlenme garantisi. (11.11) |
+| **Fact / dimension** | Ölçülen olayların tablosu / onları anlamlandıran bağlam tabloları (müşteri, ürün, tarih). (12.6) |
+| **SCD tip 2** | Boyuttaki değişiklikte eski satırı kapatıp yenisini ekleyerek geçmişi saklama. (12.7) |
+| **Model riski / validasyon** | Hatalı modelin yol açtığı risk / modelin bağımsız ekipçe incelenmesi. (13.13) |
+| **Gini / KS / PSI** | Kredi modellerinde ayrıştırma gücü ve dağılım kayması metrikleri. (13.13) |
+| **SHAP** | Her değişkenin tek bir tahmine katkısını gösteren açıklama yöntemi. (13.14) |
 
 ## İlgili sayfalar
 - [0.1 Koddan canlıya](01-koddan-canliya.md)

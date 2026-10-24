@@ -98,3 +98,4 @@ with mlflow.start_run():
 - [13.2 MLflow](02-mlflow.md)
 - [13.3 Model serving](03-model-serving.md)
 - [13.11 ML platformları](11-ml-platformlari.md)
+- [13.13 Model riski ve validasyon](13-model-riski-validasyon.md)

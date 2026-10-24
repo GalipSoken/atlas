@@ -52,7 +52,7 @@ flowchart TB
 ## Mini örnek
 Koddan çalışan uygulamaya, Dockerfile bile yazmadan (S2I ile):
 ```bash
-oc login https://api.ocp.sirket.local:6443 -u galip
+oc login https://api.ocp.sirket.local:6443 -u mehmet
 oc new-project veri-dev
 oc new-app python:3.11~https://git.sirket.local/veri/kredi-api.git --name=kredi-api
 oc logs -f bc/kredi-api            # cluster içinde build'i izle

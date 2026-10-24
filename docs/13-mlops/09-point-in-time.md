@@ -121,3 +121,4 @@ Feature store'larda bu işlem `get_historical_features` benzeri tek bir çağrı
 - [13.5 Feature kavramı](05-feature-kavrami.md)
 - [13.8 Offline ve online store](08-offline-online-store.md)
 - [10.5 DuckDB](../10-veri-isleme/05-polars-duckdb.md)
+- [12.7 SCD ve point-in-time boyutlar](../12-bi/07-scd-data-vault.md)

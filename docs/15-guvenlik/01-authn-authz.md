@@ -27,9 +27,9 @@ sequenceDiagram
     participant P as Yetki kontrolü<br/>(roller, politikalar)
     U->>A: Giriş isteği
     A->>IdP: Kimlik bilgilerini doğrula (AuthN)
-    IdP-->>A: Doğrulandı: galip, gruplar: [veri-ekibi, kredi-okuma]
+    IdP-->>A: Doğrulandı: mehmet, gruplar: [veri-ekibi, kredi-okuma]
     U->>A: GET /kredi/musteri/123
-    A->>P: galip, kredi-okuma rolüyle müşteri 123'ü okuyabilir mi? (AuthZ)
+    A->>P: mehmet, kredi-okuma rolüyle müşteri 123'ü okuyabilir mi? (AuthZ)
     P-->>A: Evet / Hayır
     A-->>U: 200 veri veya 403
     A->>A: Denetim kaydı: kim, ne zaman, neye erişti (Audit)
@@ -69,7 +69,7 @@ def kimlik_dogrula(token: str = Depends(...)) -> dict:          # AuthN
     kullanici = token_cozumle(token)                              # imza, süre kontrolü
     if kullanici is None:
         raise HTTPException(401, "Kimlik doğrulanamadı")
-    return kullanici                                              # {"ad": "galip", "roller": [...], "bolge": "IST"}
+    return kullanici                                              # {"ad": "mehmet", "roller": [...], "bolge": "IST"}
 
 def yetki(gerekli_rol: str):
     def kontrol(k: dict = Depends(kimlik_dogrula)):               # AuthZ
