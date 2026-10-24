@@ -113,10 +113,12 @@ duckdb -c "DESCRIBE SELECT * FROM 'kredi.parquet'"    # Parquet şeması
 | Ortama özgü ayar ve şifre (geliştirmede) | `.env` |
 
 ## Benzerleri ve farkları
-- **Sıkıştırma ayrı bir katmandır:** `kredi.csv.gz`, Parquet içinde Snappy/Zstd. Sıkıştırma boyutu küçültür; formatın yapısını değiştirmez.
-- **Kodlama (encoding):** Metin formatlarında karakter kodlaması önemlidir. Standart **UTF-8**; eski Windows/Excel dosyalarında `cp1254` (Türkçe Windows) veya `ISO-8859-9` ile karşılaşılabilir.
+- **Sıkıştırma ayrı bir katmandır:** `kredi.csv.gz`, Parquet içinde Snappy/Zstd. Sıkıştırma boyutu küçültür; formatın yapısını değiştirmez ([16.12](12-sikistirma-arsiv.md)).
+- **Kodlama (encoding):** Metin formatlarında karakter kodlaması önemlidir. Standart **UTF-8**; eski Windows/Excel dosyalarında `cp1254` (Türkçe Windows) veya `ISO-8859-9` ile karşılaşılabilir ([16.11](11-karakter-kodlamasi.md)).
 
 ## İlgili sayfalar
 - [16.2 CSV](02-csv.md)
 - [16.5 Parquet](05-parquet.md)
 - [16.6 YAML](06-yaml.md)
+- [16.10 Markdown](10-markdown.md)
+- [16.14 Bankacılık ve finans formatları](14-finans-formatlari.md)

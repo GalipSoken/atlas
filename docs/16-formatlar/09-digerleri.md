@@ -160,3 +160,4 @@ SELECT * FROM read_xlsx('bddk_kredi.xlsx', sheet = 'Krediler', range = 'A4:C200'
 - [16.1 Genel bakış](01-genel-bakis.md)
 - [16.5 Parquet](05-parquet.md)
 - [11.7 Kafka](../11-veri-akisi/07-kafka.md)
+- [16.14 Bankacılık ve finans formatları](14-finans-formatlari.md)

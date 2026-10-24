@@ -105,3 +105,4 @@ COPY (SELECT * FROM read_csv('kredi.csv')) TO 'kredi.parquet' (FORMAT parquet);
 - [16.1 Genel bakış](01-genel-bakis.md)
 - [16.5 Parquet](05-parquet.md)
 - [10.2 pandas](../10-veri-isleme/02-pandas.md)
+- [16.11 Karakter kodlaması](11-karakter-kodlamasi.md)
