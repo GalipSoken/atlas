@@ -59,7 +59,7 @@ flowchart LR
 **Vault CLI ile KV secret**
 ```bash
 export VAULT_ADDR=https://vault.sirket.local
-vault login -method=ldap username=gsoken                # kurumsal kimlikle giriş
+vault login -method=ldap username=mturk                # kurumsal kimlikle giriş
 vault kv put secret/veri/kredi-db kullanici=svc_kredi parola='...'
 vault kv get -field=parola secret/veri/kredi-db
 ```

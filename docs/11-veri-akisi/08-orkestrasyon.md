@@ -54,21 +54,21 @@ flowchart LR
 | **Kurumsal zamanlayıcılar** | Control-M, IBM Workload Scheduler | Bankalarda merkezi iş zamanlama | Kurum çapında batch işler |
 
 ## Mini örnek
-**Airflow DAG** (`dags/bddk_aylik.py`):
+**Airflow DAG** (`dags/bddk_gunluk.py`, Airflow 3 yazımı):
 ```python
-from datetime import datetime, timedelta
-from airflow.decorators import dag, task
+import pendulum
+from airflow.sdk import dag, task
 
-varsayilan = {"retries": 3, "retry_delay": timedelta(minutes=10)}
+varsayilan = {"retries": 3, "retry_delay": pendulum.duration(minutes=10)}
 
 @dag(
-    schedule="0 7 * * 1-5",
-    start_date=datetime(2026, 1, 1),
+    schedule="0 7 * * 1-5",                                   # hafta içi 07:00
+    start_date=pendulum.datetime(2026, 1, 1, tz="Europe/Istanbul"),
     catchup=False,
     default_args=varsayilan,
     tags=["bddk"],
 )
-def bddk_aylik():
+def bddk_gunluk():
 
     @task
     def kredi_etl(ds=None):           # ds: mantıksal çalışma tarihi (Airflow verir)
@@ -92,14 +92,17 @@ def bddk_aylik():
 
     metrikler(kredi_etl(), mevduat_etl()) >> kalite_kontrol()
 
-bddk_aylik()
+bddk_gunluk()
 ```
+Airflow 2 kullanan ortamlarda import satırı `from airflow.decorators import dag, task` olur; geri kalan yapı aynıdır. Airflow 2, 3 ve diğer orkestratörlerin karşılaştırması: [11.10](10-orkestrator-karsilastirma.md).
 
 ```bash
 airflow dags list
-airflow dags test bddk_aylik 2026-10-13          # yerelde dene
-airflow dags backfill bddk_aylik -s 2026-01-01 -e 2026-03-31   # geçmişi doldur (Airflow 2.x; 3.x'te arayüzden/komutla backfill)
+airflow dags test bddk_gunluk 2026-10-13          # yerelde dene
+airflow backfill create --dag-id bddk_gunluk --from-date 2026-01-01 --to-date 2026-03-31   # geçmişi doldur (Airflow 3)
+# Airflow 2.x: airflow dags backfill bddk_gunluk -s 2026-01-01 -e 2026-03-31
 ```
+
 
 **n8n** ile aynı fikrin görsel karşılığı (kavramsal):
 ```text
@@ -125,3 +128,4 @@ airflow dags backfill bddk_aylik -s 2026-01-01 -e 2026-03-31   # geçmişi doldu
 - [5.6 Kubernetes CronJob](../05-kubernetes/06-job-cronjob.md)
 - [11.4 dbt](04-dbt.md)
 - [11.10 Airflow, Dagster, Prefect karşılaştırması](10-orkestrator-karsilastirma.md)
+- [cron ve tarih/zaman formatları cheat sheet](../ekler/cron-zaman-cheatsheet.md)

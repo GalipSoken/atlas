@@ -96,3 +96,4 @@ SELECT * FROM lakehouse.gold.kredi_aylik VERSION AS OF 42;
 - [9.11 Schema-on-write ve read](11-schema-on-write-read.md)
 - [17.5 Parquet](../17-formatlar/05-parquet.md)
 - [9.15 Nesne depolama: S3 ve MinIO](15-nesne-depolama.md)
+- [12.6 Boyutsal modelleme](../12-bi/06-boyutsal-modelleme.md)

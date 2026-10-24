@@ -46,8 +46,8 @@ flowchart TB
 **AD'ye özgü LDAP öznitelikleri**
 | Öznitelik | Anlamı |
 |---|---|
-| `sAMAccountName` | Eski stil kullanıcı adı: `gsoken` |
-| `userPrincipalName` (UPN) | E-posta biçiminde oturum adı: `gsoken@sirket.local` |
+| `sAMAccountName` | Eski stil kullanıcı adı: `mturk` |
+| `userPrincipalName` (UPN) | E-posta biçiminde oturum adı: `mturk@sirket.local` |
 | `memberOf` | Kullanıcının doğrudan üye olduğu gruplar |
 | `member` | Grubun üyeleri |
 | `distinguishedName` | DN |
@@ -61,7 +61,7 @@ AD'de bir kullanıcıyı ve gruplarını LDAP ile sorgulamak:
 ldapsearch -H ldaps://dc01.sirket.local:636 \
   -D "svc-ldap-okuma@sirket.local" -W \
   -b "DC=sirket,DC=local" \
-  "(&(objectClass=user)(sAMAccountName=gsoken))" \
+  "(&(objectClass=user)(sAMAccountName=mturk))" \
   displayName mail department memberOf userAccountControl
 ```
 
@@ -78,7 +78,7 @@ Devre dışı hesapları hariç tutmak:
 
 PowerShell ile (Windows yönetim tarafında):
 ```powershell
-Get-ADUser gsoken -Properties memberOf, department, lastLogonTimestamp
+Get-ADUser mturk -Properties memberOf, department, lastLogonTimestamp
 Get-ADGroupMember "veri-ekibi" -Recursive | Select-Object Name, SamAccountName
 ```
 

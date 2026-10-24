@@ -183,6 +183,8 @@ Her konu sayfası aynı yapıyı izler:
 - [12.3 Grafana: BI'dan farkı](docs/12-bi/03-grafana.md)
 - [12.4 Dashboard tasarım prensipleri](docs/12-bi/04-dashboard-tasarimi.md)
 - [12.5 Streamlit ve hazır BI araçları karşılaştırması](docs/12-bi/05-streamlit.md)
+- [12.6 Boyutsal modelleme: fact, dimension, star ve snowflake şema](docs/12-bi/06-boyutsal-modelleme.md)
+- [12.7 SCD, Data Vault ve modelleme yaklaşımları (Kimball, Inmon)](docs/12-bi/07-scd-data-vault.md)
 
 ### Kısım IV — Model ve Operasyon
 
@@ -199,6 +201,8 @@ Her konu sayfası aynı yapıyı izler:
 - [13.10 Plugin / eklenti mimarisi: platforma yeni yetenek eklemek](docs/13-mlops/10-plugin-mimarisi.md) — feature store'un bir ML platformuna plugin olarak eklenmesi örneğiyle
 - [13.11 Uçtan uca ML platformları: bileşenler nasıl bir araya gelir](docs/13-mlops/11-ml-platformlari.md)
 - [13.12 GenAI altyapısı: embedding, RAG ve LLMOps](docs/13-mlops/12-genai-rag.md)
+- [13.13 Model riski yönetimi ve model validasyonu](docs/13-mlops/13-model-riski-validasyon.md) — envanter, Gini/KS/PSI, champion/challenger
+- [13.14 Model açıklanabilirliği ve adillik](docs/13-mlops/14-aciklanabilirlik-adillik.md) — SHAP, ret gerekçesi kodları, adillik metrikleri
 
 #### 14. Gözlemlenebilirlik
 - [14.1 Log, metrik ve trace](docs/14-gozlemlenebilirlik/01-log-metrik-trace.md)
@@ -288,5 +292,4 @@ atlas/
 │   ├── 16-veri-yonetisimi/
 │   ├── 17-formatlar/
 │   └── ekler/
-└── assets/                 # diyagramlar ve görseller
 ```

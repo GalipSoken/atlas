@@ -40,8 +40,8 @@ flowchart LR
 ## Mini örnek
 ```bash
 git --version
-git config --global user.name "Galip Söken"
-git config --global user.email "galip@ornek.com"
+git config --global user.name "Mehmet Türk"
+git config --global user.email "mehmet@ornek.com"
 
 mkdir bddk_etl && cd bddk_etl
 git init                         # klasörü repo yap

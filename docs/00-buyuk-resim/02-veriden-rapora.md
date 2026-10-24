@@ -30,7 +30,19 @@ flowchart LR
 | Sunum | Hazır tablolar | Rapor tabloları, feature tabloları |
 | Tüketim | Raporu okumak, karar almak | Power BI, Grafana, Streamlit, modeller |
 
-**Schema-on-write** (yazarken şema zorla) ve **schema-on-read** (okurken şema uygula) bu yolun hangi noktasında veri kalitesi kontrolü yapılacağını belirler. Ayrıntılar: Bölüm 9 ve 11.
+**Schema-on-write** (yazarken şema zorla) ve **schema-on-read** (okurken şema uygula) bu yolun hangi noktasında veri kalitesi kontrolü yapılacağını belirler. Ayrıntılar: [9.11](../09-veri-depolama/11-schema-on-write-read.md) ve [11.2](../11-veri-akisi/02-akista-schema.md).
+
+**Kitapta bu akışın adımları**
+| Adım | Ne olur? | Bölüm |
+|---|---|---|
+| Kaynak sistemler ve depolama | OLTP, SQL, NoSQL, nesne depolama, lakehouse | [9](../09-veri-depolama/01-oltp-olap.md) |
+| SQL derinlemesine | Transaction, lock, index, plan, partition | [9.16](../09-veri-depolama/16-transaction-isolation.md) |
+| İşleme | SQL, pandas, Spark, Polars, DuckDB, Dask | [10](../10-veri-isleme/01-sql.md) |
+| Taşıma ve dönüşüm | ETL/ELT, konnektörler, CDC, dbt, orkestrasyon, Kafka | [11](../11-veri-akisi/01-etl-elt.md) |
+| Modelleme ve raporlama | Boyutsal model, SCD, BI, dashboard | [12](../12-bi/01-bi-nedir.md) |
+| Model ve analitik | Feature store, MLOps, model riski | [13](../13-mlops/01-ml-yasam-dongusu.md) |
+| Yönetişim ve kalite | Katalog, lineage, sahiplik, sınıflandırma, kalite | [16](../16-veri-yonetisimi/01-veri-yonetisimi-nedir.md) |
+| Dosya formatları | CSV, JSON, Parquet, kodlama, finans formatları | [17](../17-formatlar/01-genel-bakis.md) |
 
 ## Mini örnek
 BDDK'nın aylık bülten verisinden "sektör kredi büyümesi" raporuna giden yol:

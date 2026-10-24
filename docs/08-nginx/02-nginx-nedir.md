@@ -87,3 +87,4 @@ docker exec web nginx -t
 ## İlgili sayfalar
 - [8.3 Konfigürasyon yapısı](03-konfigurasyon.md)
 - [8.4 Reverse proxy](04-reverse-proxy.md)
+- [8.1 Web sunucusu nedir](01-web-sunucusu-nedir.md)

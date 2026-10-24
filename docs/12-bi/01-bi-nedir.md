@@ -75,3 +75,4 @@ Bir BI çözümünün tasarım adımları (aylık kredi dashboard'u):
 - [12.2 BI araçları](02-bi-araclari.md)
 - [12.4 Dashboard tasarımı](04-dashboard-tasarimi.md)
 - [0.2 Veriden rapora](../00-buyuk-resim/02-veriden-rapora.md)
+- [12.6 Boyutsal modelleme](06-boyutsal-modelleme.md)

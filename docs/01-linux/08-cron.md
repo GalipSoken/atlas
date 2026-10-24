@@ -71,3 +71,4 @@ PATH=/usr/local/bin:/usr/bin:/bin
 ## İlgili sayfalar
 - [1.7 Bash script](07-bash-script.md)
 - [1.4 Süreçler ve servisler](04-surecler.md)
+- [cron ve tarih/zaman formatları cheat sheet](../ekler/cron-zaman-cheatsheet.md)

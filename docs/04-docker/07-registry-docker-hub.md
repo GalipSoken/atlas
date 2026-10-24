@@ -41,8 +41,8 @@ registry.sirket.local/veri-ekibi/kredi-dashboard:1.4.2
 ```bash
 # Docker Hub
 docker login
-docker tag kredi-dashboard:1.0 galipsoken/kredi-dashboard:1.0
-docker push galipsoken/kredi-dashboard:1.0
+docker tag kredi-dashboard:1.0 mehmetturk/kredi-dashboard:1.0
+docker push mehmetturk/kredi-dashboard:1.0
 
 # Kurum içi registry
 docker login registry.sirket.local

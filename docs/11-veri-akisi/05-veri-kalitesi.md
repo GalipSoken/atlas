@@ -74,29 +74,7 @@ from {{ ref('fct_kredi_metrik') }}
 where abs(mom) > 0.5
 ```
 
-**Great Expectations** (Python):
-```python
-import great_expectations as gx
-import pandas as pd
-
-df = pd.read_parquet("silver/bddk_kredi.parquet")
-context = gx.get_context()
-batch = (context.data_sources.add_pandas("pd")
-         .add_dataframe_asset("kredi")
-         .add_batch_definition_whole_dataframe("tum")
-         .get_batch(batch_parameters={"dataframe": df}))
-
-suite = gx.ExpectationSuite(name="bddk_kredi")
-suite.add_expectation(gx.expectations.ExpectColumnValuesToNotBeNull(column="tutar"))
-suite.add_expectation(gx.expectations.ExpectColumnValuesToBeBetween(column="tutar", min_value=0))
-suite.add_expectation(gx.expectations.ExpectCompoundColumnsToBeUnique(column_list=["donem", "kalem"]))
-suite.add_expectation(gx.expectations.ExpectTableRowCountToBeBetween(min_value=50, max_value=500))
-
-sonuc = batch.validate(suite)
-if not sonuc.success:
-    raise ValueError("Veri kalitesi kontrolü başarısız")
-```
-*(Great Expectations API'si sürümler arasında değişti; yukarıdaki 1.x sürümü içindir.)*
+**Great Expectations** (Python): Kurallar `ExpectColumnValuesToNotBeNull`, `ExpectColumnValuesToBeBetween` gibi hazır "beklenti" nesneleriyle tanımlanır, bir suite içinde toplanır ve pandas, Spark veya SQL verisi üzerinde çalıştırılır. Güncel (1.x) API ile tam örnek ve Soda karşılaştırması: [16.9](../16-veri-yonetisimi/09-kalite-araclari.md).
 
 **pandera** (pandas için hafif şema doğrulama):
 ```python
